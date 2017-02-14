@@ -16,7 +16,7 @@ def convertString2Dictionary(inputString = ""):
                 return errorDict
 
             for value in range(len(errorDict[index])):
-                if not (errorDict[index][value].isalpha() or errorDict[index][value].isdigit() or errorDict[index][value] == "=" or errorDict[index][value] == "_"):
+                if not (errorDict[index][value].isalpha() or errorDict[index][value].isdigit() or errorDict[index][value] == "="):
                     errorDict = {'error':'true'}
                     print(errorDict)
                     return errorDict
