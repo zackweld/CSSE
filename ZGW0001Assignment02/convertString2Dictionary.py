@@ -43,13 +43,13 @@ def convertString2Dictionary(inputString = ""):
 
 #### Test inputs from the excel customer needs tab
 
-convertString2Dictionary("Key%3Dinput")
-convertString2Dictionary("function%20%3D%20get_stars")
-convertString2Dictionary("function%3D%20calculatePosition%2C%20sighting%3DBetelgeuse")
-convertString2Dictionary("key%3Dvalue%2C%20key%3Dvalue")
-convertString2Dictionary("Key%3D")
-convertString2Dictionary("1key%3Dvalue")
-convertString2Dictionary("k%3Dvalue")
-convertString2Dictionary('k%2Dey%3D%20value')
-convertString2Dictionary("key%3Dvalue%3bkey2%3Dvalue2")
+# convertString2Dictionary("Key%3Dinput")
+# convertString2Dictionary("function%20%3D%20get_stars")
+# convertString2Dictionary("function%3D%20calculatePosition%2C%20sighting%3DBetelgeuse")
+# convertString2Dictionary("key%3Dvalue%2C%20key%3Dvalue")
+# convertString2Dictionary("Key%3D")
+# convertString2Dictionary("1key%3Dvalue")
+# convertString2Dictionary("k%3Dvalue")
+# convertString2Dictionary('k%2Dey%3D%20value')
+# convertString2Dictionary("key%3Dvalue%3bkey2%3Dvalue2")
 
