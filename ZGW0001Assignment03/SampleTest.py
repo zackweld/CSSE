@@ -1,5 +1,5 @@
 import unittest
-from ZGW0001Assignment03 import Sample as SM
+import Sample as SM
 import math
 
 
