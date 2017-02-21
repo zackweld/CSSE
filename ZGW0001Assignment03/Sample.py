@@ -60,40 +60,39 @@ class Sample(object):
         return result
 
     def f(self, u, n):
-        # n = float(n)
-        # base = (1 + (u ** 2) / n)
-        # exponent = -(n + 1.0) / 2
-        # result = base ** exponent
+        n = float(n)
+        base = (1 + (u ** 2) / n)
+        exponent = -(n + 1.0) / 2
+        result = base ** exponent
 
         # Simpler function to test integrate method
-        result = u**2
+        # result = u**2
 
         return result
 
 
-    def integrate(self, lowBound, highBound, n, f):
-        # epsilon = 0.001
-        # simpsonOld = 0.0
-        # simpsonNew = epsilon
-        # s = 4
-        # while (abs((simpsonNew - simpsonOld) / simpsonNew) > epsilon):
-        #     simpsonOld = simpsonNew
-        #     w = (highBound - lowBound) / s
-        #     simpsonNew = 0
-        #     i = 0
-        #     while (i < (s+1)):
-        #         if(i == 0):
-        #             simpsonNew += f(lowBound, n)
-        #         elif(i == s):
-        #             simpsonNew += f(highBound, n)
-        #         elif(i % 2 == 0):
-        #             simpsonNew += 2*f(lowBound + (i*w), n)
-        #         else:
-        #             simpsonNew += 4*f(lowBound + (i*w), n)
-        #         i = i+1
-        #     simpsonNew = (w/3) * simpsonNew
-        #     s = s*2
-        #
-        # return simpsonNew
 
-        pass
+    def integrate(self, lowBound, highBound, n, f):
+        epsilon = 0.001
+        simpsonOld = 0.0
+        simpsonNew = epsilon
+        s = 4
+        while (abs((simpsonNew - simpsonOld) / simpsonNew) > epsilon):
+            simpsonOld = simpsonNew
+            w = (highBound - lowBound) / s
+            simpsonNew = 0
+            i = 0
+            while (i < (s+1)):
+                if(i == 0):
+                    simpsonNew += f(lowBound, n)
+                elif(i == s):
+                    simpsonNew += f(highBound, n)
+                elif(i % 2 == 0):
+                    simpsonNew += 2*f(lowBound + (i*w), n)
+                else:
+                    simpsonNew += 4*f(lowBound + (i*w), n)
+                i = i+1
+            simpsonNew = (w/3) * simpsonNew
+            s = s*2
+        return simpsonNew
+
