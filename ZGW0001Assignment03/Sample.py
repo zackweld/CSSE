@@ -72,29 +72,29 @@ class Sample(object):
 
 
     def integrate(self, lowBound, highBound, n, f):
-        epsilon = 0.001
-        simpsonOld = 0.0
-        simpsonNew = epsilon
-        s = 4
-        while (abs((simpsonNew - simpsonOld) / simpsonNew) > epsilon):
-            simpsonOld = simpsonNew
-            w = (highBound - lowBound) / s
-            simpsonNew = 0
-            i = 0
-            while (i < (s+1)):
-                if(i == 0):
-                    simpsonNew += f(lowBound, n)
-                elif(i == s):
-                    simpsonNew += f(highBound, n)
-                elif(i % 2 == 0):
-                    simpsonNew += 2*f(lowBound + (i*w), n)
-                else:
-                    simpsonNew += 4*f(lowBound + (i*w), n)
-                i = i+1
-            simpsonNew = (w/3) * simpsonNew
-            s = s*2
+        # epsilon = 0.001
+        # simpsonOld = 0.0
+        # simpsonNew = epsilon
+        # s = 4
+        # while (abs((simpsonNew - simpsonOld) / simpsonNew) > epsilon):
+        #     simpsonOld = simpsonNew
+        #     w = (highBound - lowBound) / s
+        #     simpsonNew = 0
+        #     i = 0
+        #     while (i < (s+1)):
+        #         if(i == 0):
+        #             simpsonNew += f(lowBound, n)
+        #         elif(i == s):
+        #             simpsonNew += f(highBound, n)
+        #         elif(i % 2 == 0):
+        #             simpsonNew += 2*f(lowBound + (i*w), n)
+        #         else:
+        #             simpsonNew += 4*f(lowBound + (i*w), n)
+        #         i = i+1
+        #     simpsonNew = (w/3) * simpsonNew
+        #     s = s*2
+        #
+        # return simpsonNew
 
-        return simpsonNew
-
-
+        pass
 

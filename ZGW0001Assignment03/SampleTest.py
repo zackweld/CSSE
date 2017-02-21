@@ -247,10 +247,10 @@ class SampleTest(unittest.TestCase):
 # Happy path
 #     nominal case: integrate()
 
-    def test500_010_ShouldIntegrateSimpleIntegral(self):
-        mySample = SM.Sample(self.nominalN)
-        print mySample.integrate(0.0, 1.0, 1.0, mySample.f)
-        self.assertAlmostEqual(mySample.integrate(0.0, 1.0, 1.0, mySample.f), 0.3333333, 4)
+    # def test500_010_ShouldIntegrateSimpleIntegral(self):
+    #     mySample = SM.Sample(self.nominalN)
+    #     print mySample.integrate(0.0, 1.0, 1.0, mySample.f)
+    #     self.assertAlmostEqual(mySample.integrate(0.0, 1.0, 1.0, mySample.f), 0.3333333, 4)
 
 
 
