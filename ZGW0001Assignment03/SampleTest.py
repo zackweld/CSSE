@@ -2,7 +2,6 @@ import unittest
 import Sample as SM
 import math
 
-SampleTest()
 
 class SampleTest(unittest.TestCase):
 
