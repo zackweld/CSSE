@@ -31,7 +31,7 @@
         <entry file="file://$PROJECT_DIR$/ZGW0001Assignment03/SampleTest.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="886">
-              <caret line="259" column="79" lean-forward="false" selection-start-line="259" selection-start-column="79" selection-end-line="259" selection-end-column="79" />
+              <caret line="259" column="87" lean-forward="false" selection-start-line="259" selection-start-column="87" selection-end-line="259" selection-end-column="87" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -414,9 +414,6 @@
     <option name="remove_strategy" value="false" />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_Tests_(TDD) - 2017.02.21 at 10h 23m 12s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
     <history-entry file="All_Tests_(TDD) - 2017.02.21 at 10h 29m 08s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
@@ -442,6 +439,9 @@
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
     <history-entry file="All_Tests_(TDD) - 2017.02.21 at 11h 07m 28s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.02.21 at 11h 09m 53s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
   </component>
@@ -551,7 +551,7 @@
     <entry file="file://$PROJECT_DIR$/ZGW0001Assignment03/SampleTest.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="886">
-          <caret line="259" column="79" lean-forward="false" selection-start-line="259" selection-start-column="79" selection-end-line="259" selection-end-column="79" />
+          <caret line="259" column="87" lean-forward="false" selection-start-line="259" selection-start-column="87" selection-end-line="259" selection-end-column="87" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
