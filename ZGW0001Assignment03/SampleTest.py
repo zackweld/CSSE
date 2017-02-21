@@ -257,5 +257,3 @@ class SampleTest(unittest.TestCase):
         print mySample.integrate(0.0, 16.0, 4.0, mySample.f)
         self.assertAlmostEqual(mySample.integrate(0.0, 16.0, 4.0, mySample.f), 1.3332, 4)
 
-
-SampleTest.test500_010_ShouldEvalueateFullIntegral()
