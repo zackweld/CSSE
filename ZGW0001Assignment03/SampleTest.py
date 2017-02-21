@@ -1,5 +1,5 @@
 import unittest
-import "Sample" as SM
+import Sample as SM
 import math
 
 class SampleTest(unittest.TestCase):
