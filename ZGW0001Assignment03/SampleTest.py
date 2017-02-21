@@ -260,3 +260,4 @@ class SampleTest(unittest.TestCase):
         self.assertAlmostEqual(mySample.integrate(0.0, 16.0, 4.0, mySample.f), 1.3332, 4)
         self.assertAlmostEqual(mySample.integrate(0.0, 20.0, 6.0, mySample.f), 1.3064, 4)
         self.assertAlmostEqual(mySample.integrate(0.0, 1.0, 30.0, mySample.f), 0.85268, 4)
+        self.assertAlmostEqual(mySample.integrate(0.0, 1.4398, 5.0, mySample.f), )
