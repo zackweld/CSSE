@@ -1,5 +1,5 @@
 import unittest
-import ZGW0001Assignment02.convertString2Dictionary as SM
+import ZGW0001Assignment03.Sample as SM
 import math
 
 
