@@ -1,5 +1,5 @@
 import unittest
-import softwareprocess.Sample as SM
+import Sample as SM
 import math
 
 
@@ -249,8 +249,9 @@ class SampleTest(unittest.TestCase):
 
     def test500_010_ShouldIntegrateSimpleIntegral(self):
         mySample = SM.Sample(self.nominalN)
-        self.assertAlmostEqual(mySample.integrate(0.0, 1.0, 1.0, u), 0.5, 0.1)
-        print "Hello"
+        print mySample.integrate(0.0, 1.0, 1.0, mySample.f)
+        self.assertAlmostEqual(mySample.integrate(0.0, 1.0, 1.0, mySample.f), 0.3333333, 4)
+
 
 
 

@@ -66,7 +66,7 @@ class Sample(object):
         # result = base ** exponent
 
         # Simpler function to test integrate method
-        result = u
+        result = u**2
 
         return result
 
@@ -80,7 +80,8 @@ class Sample(object):
             simpsonOld = simpsonNew
             w = (highBound - lowBound) / s
             simpsonNew = 0
-            for i in (s+1):
+            i = 0
+            while (i < (s+1)):
                 if(i == 0):
                     simpsonNew += f(lowBound, n)
                 elif(i == s):
@@ -89,8 +90,10 @@ class Sample(object):
                     simpsonNew += 2*f(lowBound + (i*w), n)
                 else:
                     simpsonNew += 4*f(lowBound + (i*w), n)
+                i = i+1
             simpsonNew = (w/3) * simpsonNew
             s = s*2
+
         return simpsonNew
 
 
