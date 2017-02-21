@@ -256,5 +256,5 @@ class SampleTest(unittest.TestCase):
         mySample = SM.Sample(self.nominalN)
         # print mySample.integrate(0.0, 16.0, 4.0, mySample.f)
         self.assertAlmostEqual(mySample.integrate(0.0, 16.0, 4.0, mySample.f), 1.3332, 4)
-        self.assertAlmostEqual(mySample.integrate(0.0, 20.0, 6.0, mySample.f), )
-
+        self.assertAlmostEqual(mySample.integrate(0.0, 20.0, 6.0, mySample.f), 1.3064, 4)
+        self.assertAlmostEqual(mySample.integrate(0.0, 1.0, 30.0, mySample.f), )
