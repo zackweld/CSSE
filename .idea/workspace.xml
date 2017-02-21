@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba02728e-0b89-4d8b-b5a2-437cf818b6ac" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ZGW0001Assignment03/Sample.py" afterPath="$PROJECT_DIR$/ZGW0001Assignment03/Sample.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ZGW0001Assignment03/SampleTest.py" afterPath="$PROJECT_DIR$/ZGW0001Assignment03/SampleTest.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,11 +30,9 @@
       <file leaf-file-name="SampleTest.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ZGW0001Assignment03/SampleTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="33">
+              <caret line="1" column="7" lean-forward="false" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -368,17 +365,8 @@
     <option name="remove_strategy" value="false" />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_Tests_(TDD) - 2017.02.21 at 08h 20m 17s.xml">
+    <history-entry file="All_Tests_(TDD) - 2017.02.21 at 08h 31m 05s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_SampleTest - 2017.02.21 at 08h 17m 45s.xml">
-      <configuration name="Unittests in SampleTest" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_SampleTest - 2017.02.21 at 08h 18m 02s.xml">
-      <configuration name="Unittests in SampleTest" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_SampleTest - 2017.02.21 at 08h 18m 25s.xml">
-      <configuration name="Unittests in SampleTest" configurationId="tests" />
     </history-entry>
     <history-entry file="Unittests_in_SampleTest - 2017.02.21 at 08h 25m 18s.xml">
       <configuration name="Unittests in SampleTest" configurationId="tests" />
@@ -396,6 +384,15 @@
       <configuration name="Unittests in SampleTest" configurationId="tests" />
     </history-entry>
     <history-entry file="Unittests_in_SampleTest - 2017.02.21 at 08h 27m 38s.xml">
+      <configuration name="Unittests in SampleTest" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_SampleTest - 2017.02.21 at 08h 33m 19s.xml">
+      <configuration name="Unittests in SampleTest" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_SampleTest - 2017.02.21 at 08h 34m 48s.xml">
+      <configuration name="Unittests in SampleTest" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_SampleTest - 2017.02.21 at 08h 34m 59s.xml">
       <configuration name="Unittests in SampleTest" configurationId="tests" />
     </history-entry>
   </component>
@@ -443,9 +440,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -475,11 +470,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ZGW0001Assignment03/SampleTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="33">
+          <caret line="1" column="7" lean-forward="false" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
