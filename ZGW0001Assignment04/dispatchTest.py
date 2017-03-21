@@ -24,7 +24,7 @@ class DispatchTest(unittest.TestCase):
 
 
     def test100_050_DispatchExecutesAdjust(self):
-        passed = 0
+        passed = "fail"
         values = {}
         #Validate parm
         if(values == None):
@@ -37,7 +37,7 @@ class DispatchTest(unittest.TestCase):
 
         #Perform designated function
         if(values['op'] == 'adjust'):
-            passed = 1
+            passed = "pass"
             return values    #<-------------- replace this with your implementation
         elif(values['op'] == 'predict'):
             return values    #This calculation is stubbed out
@@ -50,5 +50,5 @@ class DispatchTest(unittest.TestCase):
             values['error'] = 'op is not a legal operation'
             return values
 
-        self.assertEquals(passed, 1)
+        self.assertEquals(passed, "pass")
 

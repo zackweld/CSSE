@@ -16,7 +16,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.3525618">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
           <file leaf-file-name="SampleTest.py" pinned="false" current-in-tab="false">
@@ -60,8 +60,8 @@
                   <caret line="8" column="36" lean-forward="false" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
                   <folding>
                     <element signature="e#0#15#0" expanded="true" />
-                    <marker date="1490067701858" expanded="true" signature="71:2200" ph="..." />
-                    <marker date="1490067701858" expanded="true" signature="350:2200" ph="..." />
+                    <marker date="1490067947814" expanded="true" signature="71:2086" ph="..." />
+                    <marker date="1490067947814" expanded="true" signature="350:2086" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -74,8 +74,8 @@
           <file leaf-file-name="dispatchTest.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/ZGW0001Assignment04/dispatchTest.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="462">
-                  <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+                <state relative-caret-position="110">
+                  <caret line="27" column="18" lean-forward="false" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
                   <folding>
                     <element signature="e#0#15#0" expanded="true" />
                   </folding>
@@ -573,15 +573,6 @@
     <option name="remove_strategy" value="false" />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_Tests_(TDD) - 2017.03.20 at 22h 37m 33s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.03.20 at 22h 39m 47s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.03.20 at 22h 40m 27s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
     <history-entry file="All_Tests_(TDD) - 2017.03.20 at 22h 40m 48s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
@@ -591,17 +582,26 @@
     <history-entry file="All_Tests_(TDD) - 2017.03.20 at 22h 41m 42s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
-    <history-entry file="UnitTests_in_dispatch - 2017.03.20 at 22h 37m 31s.xml">
-      <configuration name="UnitTests in dispatch" configurationId="tests" />
+    <history-entry file="All_Tests_(TDD) - 2017.03.20 at 22h 43m 23s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
-    <history-entry file="UnitTests_in_dispatch - 2017.03.20 at 22h 38m 44s.xml">
-      <configuration name="UnitTests in dispatch" configurationId="tests" />
+    <history-entry file="All_Tests_(TDD) - 2017.03.20 at 22h 43m 27s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
-    <history-entry file="UnitTests_in_dispatch - 2017.03.20 at 22h 38m 56s.xml">
-      <configuration name="UnitTests in dispatch" configurationId="tests" />
+    <history-entry file="All_Tests_(TDD) - 2017.03.20 at 22h 43m 45s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
-    <history-entry file="UnitTests_in_dispatch - 2017.03.20 at 22h 39m 43s.xml">
-      <configuration name="UnitTests in dispatch" configurationId="tests" />
+    <history-entry file="All_Tests_(TDD) - 2017.03.20 at 22h 43m 49s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.03.20 at 22h 44m 22s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.03.20 at 22h 44m 44s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.03.20 at 22h 45m 48s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -979,8 +979,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ZGW0001Assignment04/dispatchTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+        <state relative-caret-position="110">
+          <caret line="27" column="18" lean-forward="false" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
