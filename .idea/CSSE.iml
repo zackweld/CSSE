@@ -3,6 +3,9 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ZGW0001Assignment02" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ZGW0001Assignment03" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ZGW0001Assignment04" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="Python 2.7.13 (C:\Python27\python.exe)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
