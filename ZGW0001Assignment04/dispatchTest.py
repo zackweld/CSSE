@@ -25,7 +25,7 @@ class DispatchTest(unittest.TestCase):
 
     def test100_050_DispatchExecutesAdjust(self):
         passed = "fail"
-        values = {'temperature': '72', 'op': 'Wrong'}
+        values = {'temperature': '72', 'op': 'Adjust'}
         # #Validate parm
         # if(values == None):
         #     return {'error': 'parameter is missing'}
