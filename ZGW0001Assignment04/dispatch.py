@@ -13,7 +13,7 @@ def dispatch(values=None):
 
     #Perform designated function
     if(values['op'] == 'adjust'):
-        if (not('observation' in values and 'horizon' in values)):
+        if (not('observation' in values)):
             return {'error': 'mandatory information missing'}
 
 
