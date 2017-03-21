@@ -13,11 +13,11 @@ class DispatchTest(unittest.TestCase):
         expected_result = {'error': 'parameter is not a dictionary'}
         self.assertDictEqual(expected_result, dispatch.dispatch("hello"))
 
-    # def test100_030_DispatchNoOpSpecified(self):
-    #     expected_result = {'temperature': '72', 'error': 'no op is specified'}
-    #     self.assertEquals(expected_result, dispatch.dispatch({'temperature': '72'}))
-    #
-    #
+    def test100_030_DispatchNoOpSpecified(self):
+        expected_result = {}
+        self.assertEquals(expected_result, dispatch.dispatch({'temperature': '72'}))
+
+
     # def test100_040_DispatchOpIsNotALegalOperation(self):
     #     expected_result = {'temperature': '72', 'error': 'op is not a legal operation'}
     #     self.assertDictEqual(expected_result, dispatch.dispatch({'temperature': '72', 'op': 'Wrong'}))
