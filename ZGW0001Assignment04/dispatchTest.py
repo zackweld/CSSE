@@ -9,11 +9,10 @@ class DispatchTest(unittest.TestCase):
         expected_result = {'error': 'parameter is missing'}
         self.assertDictEqual(expected_result, dispatch.dispatch())
 
-    # def test100_020_DispatchNotADictionary(self):
-    #     expected_result = {}
-    #     self.assertDictEqual(expected_result, dispatch.dispatch("hello"))
-    #
-    #
+    def test100_020_DispatchNotADictionary(self):
+        expected_result = {}
+        self.assertDictEqual(expected_result, dispatch.dispatch("hello"))
+
     # def test100_030_DispatchNoOpSpecified(self):
     #     expected_result = {'temperature': '72', 'error': 'no op is specified'}
     #     self.assertEquals(expected_result, dispatch.dispatch({'temperature': '72'}))
