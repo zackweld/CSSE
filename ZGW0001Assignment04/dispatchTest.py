@@ -10,7 +10,7 @@ class DispatchTest(unittest.TestCase):
         self.assertDictEqual(expected_result, dispatch.dispatch())
 
     def test100_020_DispatchNotADictionary(self):
-        expected_result = {'error': 'parameter is not a directory'}
+        expected_result = {'error': 'parameter is not a dictionary'}
         self.assertDictEqual(expected_result, dispatch.dispatch("hello"))
 
     # def test100_030_DispatchNoOpSpecified(self):
