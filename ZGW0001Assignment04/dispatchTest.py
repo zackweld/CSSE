@@ -25,7 +25,7 @@ class DispatchTest(unittest.TestCase):
 
     def test100_050_DispatchExecutesAdjust(self):
         passed = 0
-        values = {'temperature': '72', 'op': 'adjust'}
+        values = {}
         #Validate parm
         if(values == None):
             return {'error': 'parameter is missing'}
@@ -46,6 +46,7 @@ class DispatchTest(unittest.TestCase):
         elif(values['op'] == 'locate'):
             return values    #This calculation is stubbed out
         else:
+            del values['op']
             values['error'] = 'op is not a legal operation'
             return values
 
