@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba02728e-0b89-4d8b-b5a2-437cf818b6ac" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ZGW0001Assignment04/dispatch.py" afterPath="$PROJECT_DIR$/ZGW0001Assignment04/dispatch.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ZGW0001Assignment04/dispatchTest.py" afterPath="$PROJECT_DIR$/ZGW0001Assignment04/dispatchTest.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,7 +47,7 @@
             <entry file="file://$PROJECT_DIR$/ZGW0001Assignment04/dispatch.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="561">
-                  <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+                  <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -61,9 +60,9 @@
                   <caret line="8" column="36" lean-forward="false" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
                   <folding>
                     <element signature="e#0#15#0" expanded="true" />
-                    <marker date="1490070728221" expanded="true" signature="71:2262" ph="..." />
-                    <marker date="1490070728221" expanded="true" signature="217:2262" ph="..." />
-                    <marker date="1490070728221" expanded="true" signature="350:2262" ph="..." />
+                    <marker date="1490071004548" expanded="true" signature="71:2262" ph="..." />
+                    <marker date="1490071004548" expanded="true" signature="217:2262" ph="..." />
+                    <marker date="1490071004548" expanded="true" signature="350:2262" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -76,8 +75,8 @@
           <file leaf-file-name="dispatchTest.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/ZGW0001Assignment04/dispatchTest.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="891">
-                  <caret line="76" column="36" lean-forward="false" selection-start-line="76" selection-start-column="36" selection-end-line="76" selection-end-column="36" />
+                <state relative-caret-position="665">
+                  <caret line="78" column="72" lean-forward="false" selection-start-line="78" selection-start-column="72" selection-end-line="78" selection-end-column="72" />
                   <folding>
                     <element signature="e#0#15#0" expanded="true" />
                   </folding>
@@ -575,9 +574,6 @@
     <option name="remove_strategy" value="false" />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_Tests_(TDD) - 2017.03.20 at 22h 48m 48s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
     <history-entry file="All_Tests_(TDD) - 2017.03.20 at 22h 50m 22s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
@@ -597,6 +593,9 @@
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
     <history-entry file="All_Tests_(TDD) - 2017.03.20 at 23h 30m 13s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.03.20 at 23h 34m 35s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
     <history-entry file="UnitTests_in_dispatch - 2017.03.20 at 22h 49m 44s.xml">
@@ -974,15 +973,15 @@
     <entry file="file://$PROJECT_DIR$/ZGW0001Assignment04/dispatch.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ZGW0001Assignment04/dispatchTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="891">
-          <caret line="76" column="36" lean-forward="false" selection-start-line="76" selection-start-column="36" selection-end-line="76" selection-end-column="36" />
+        <state relative-caret-position="665">
+          <caret line="78" column="72" lean-forward="false" selection-start-line="78" selection-start-column="72" selection-end-line="78" selection-end-column="72" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>

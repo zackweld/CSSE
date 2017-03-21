@@ -73,5 +73,10 @@ class DispatchTest(unittest.TestCase):
         self.assertDictEqual(expected_result, dispatch.dispatch(missingObservation))
         self.assertDictEqual(expected_result, dispatch.dispatch(missingHorizon))
 
-    def test200_020_AdjustObservationGreaterThan90(self):
-        expected_result = {'error', }
+    def test200_020_AdjustObservationInvalid(self):
+        expected_result = {'op': 'adjust', 'horizon': 'natural', 'observation': '91', 'error': 'observation is invalid'}
+        call = {'op': 'adjust', 'horizon': 'natural', 'observation': '91'}
+        call2 = {'op': 'adjust', 'horizon': 'natural', 'observation': '0'}
+        self.assertDictEqual(expected_result, dispatch.dispatch(call))
+
+
