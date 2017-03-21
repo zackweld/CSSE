@@ -1,6 +1,10 @@
 import unittest
 import dispatch
 
+import sys
+sys.path.append('/ZGW0001Assignment04')
+
+
 class DispatchTest(unittest.TestCase):
 
     # Validating the input for dispatch
