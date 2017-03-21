@@ -25,7 +25,7 @@ class DispatchTest(unittest.TestCase):
 
     def test100_050_DispatchExecutesAdjust(self):
         passed = "fail"
-        values = {}
+        values = {'temperature': '72', 'op': 'Wrong'}
         # #Validate parm
         # if(values == None):
         #     return {'error': 'parameter is missing'}
@@ -40,12 +40,16 @@ class DispatchTest(unittest.TestCase):
             passed = "pass"
             # return values    #<-------------- replace this with your implementation
         elif(values['op'] == 'predict'):
+            pass
             # return values    #This calculation is stubbed out
         elif(values['op'] == 'correct'):
+            pass
             # return values    #This calculation is stubbed out
         elif(values['op'] == 'locate'):
+            pass
             # return values    #This calculation is stubbed out
         else:
+            pass
             # del values['op']
             # values['error'] = 'op is not a legal operation'
             # return values
