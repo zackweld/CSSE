@@ -8,7 +8,7 @@ def dispatch(values=None):
     if(not(isinstance(values,dict))):
         return {'error': 'parameter is not a dictionary'}
     if (not('op' in values)):
-        values['error'] = 'no op  is specified'
+        values['error'] = 'no op is specified'
         return values
 
     #Perform designated function
@@ -21,15 +21,8 @@ def dispatch(values=None):
     elif(values['op'] == 'locate'):
         return values    #This calculation is stubbed out
     else:
+        del values['op']
         values['error'] = 'op is not a legal operation'
         return values
 
 
-# Test Cases
-
-class DispatchTest(unittest.TestCase):
-    def test100_010_ShouldRaiseExceptionNoParameters(self):
-        expected_result = {'error': 'parameter is missing'}
-        self.assertDictEqual(expected_result, dispatch())
-
-print(dispatch())
