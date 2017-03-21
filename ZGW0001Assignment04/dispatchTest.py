@@ -1,6 +1,4 @@
 import unittest
-import sys
-sys.path.append('\\\ZGW0001Assignment04')
 import dispatch
 
 class DispatchTest(unittest.TestCase):
