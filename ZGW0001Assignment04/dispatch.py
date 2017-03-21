@@ -30,10 +30,6 @@ def dispatch(values=None):
 class dispatchTest(unittest.TestCase):
     def test100_010_ShouldRaiseExceptionNoParameters(self):
         expected_string = "\'error\': \'parameter is missing\'"
-        print("Hello")
         with self.assertRaises(ValueError) as context:
             dispatch()
         self.assertAlmostEquals(expected_string, context.exception.args[0][0:len(expected_string)])
-
-
-print("Hello")
