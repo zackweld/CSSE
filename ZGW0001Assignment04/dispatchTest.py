@@ -19,7 +19,7 @@ class DispatchTest(unittest.TestCase):
 
 
     def test100_040_DispatchOpIsNotALegalOperation(self):
-        expected_result = {}
+        expected_result = {'temperature': '72', 'error': 'op is not a legal operation'}
         self.assertDictEqual(expected_result, dispatch.dispatch({'temperature': '72', 'op': 'Wrong'}))
 
 
