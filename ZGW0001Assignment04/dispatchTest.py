@@ -18,11 +18,11 @@ class DispatchTest(unittest.TestCase):
         self.assertEquals(expected_result, dispatch.dispatch({'temperature': '72'}))
 
 
-    # def test100_040_DispatchOpIsNotALegalOperation(self):
-    #     expected_result = {'temperature': '72', 'error': 'op is not a legal operation'}
-    #     self.assertDictEqual(expected_result, dispatch.dispatch({'temperature': '72', 'op': 'Wrong'}))
-    #
-    #
+    def test100_040_DispatchOpIsNotALegalOperation(self):
+        expected_result = {}
+        self.assertDictEqual(expected_result, dispatch.dispatch({'temperature': '72', 'op': 'Wrong'}))
+
+
     # def test100_050_DispatchExecutesAdjust(self):
     #     passed = 0
     #     values = {'temperature': '72', 'op': 'adjust'}
