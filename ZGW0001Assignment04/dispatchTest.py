@@ -6,11 +6,11 @@ class DispatchTest(unittest.TestCase):
     # Validating the input for dispatch
     # Must be a dictionary of one or more key-value pairs
     def test100_010_DispatchNoParameter(self):
-        expected_result = {}
+        expected_result = {'error': 'parameter is missing'}
         self.assertDictEqual(expected_result, dispatch.dispatch())
-    #
+
     # def test100_020_DispatchNotADictionary(self):
-    #     expected_result = {'error': 'parameter is not a dictionary'}
+    #     expected_result = {}
     #     self.assertDictEqual(expected_result, dispatch.dispatch("hello"))
     #
     #
