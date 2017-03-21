@@ -46,8 +46,8 @@ class DispatchTest(unittest.TestCase):
         elif(values['op'] == 'locate'):
             # return values    #This calculation is stubbed out
         else:
-            del values['op']
-            values['error'] = 'op is not a legal operation'
+            # del values['op']
+            # values['error'] = 'op is not a legal operation'
             # return values
 
         self.assertEquals(passed, "pass")
