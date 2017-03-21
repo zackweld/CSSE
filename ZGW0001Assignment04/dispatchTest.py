@@ -26,12 +26,15 @@ class DispatchTest(unittest.TestCase):
     def test100_050_DispatchExecutesAdjust(self):
         passed = "fail"
         values = {'temperature': '72', 'op': 'adjust'}
-        # #Validate parm
-        # if(values == None):
-        #     return {'error': 'parameter is missing'}
-        # if(not(isinstance(values,dict))):
+        #Validate parm
+        if(values == None):
+            pass
+            # return {'error': 'parameter is missing'}
+        if(not(isinstance(values,dict))):
+            pass
         #     return {'error': 'parameter is not a dictionary'}
-        # if (not('op' in values)):
+        if (not('op' in values)):
+            pass
         #     values['error'] = 'no op is specified'
         #     return values
 
@@ -56,3 +59,12 @@ class DispatchTest(unittest.TestCase):
 
         self.assertEquals(passed, "pass")
 
+
+############
+# Adjust Tests
+############
+
+# Check inputs
+
+    def test200_010_AdjustMissingNecessaryValues(self):
+        
