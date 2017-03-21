@@ -1,5 +1,5 @@
 import unittest
-import \ZGW0001Assignment04.dispatch
+import dispatch
 
 class DispatchTest(unittest.TestCase):
 
