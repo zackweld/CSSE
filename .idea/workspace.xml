@@ -44,8 +44,8 @@
           <file leaf-file-name="dispatch.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/ZGW0001Assignment04/dispatch.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1254">
-                  <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+                <state relative-caret-position="1056">
+                  <caret line="32" column="29" lean-forward="false" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
                   <folding />
                 </state>
               </provider>
@@ -58,7 +58,7 @@
           <file leaf-file-name="SampleTest.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/ZGW0001Assignment03/SampleTest.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-495">
+                <state relative-caret-position="-4653">
                   <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
                   <folding>
                     <element signature="e#0#15#0" expanded="true" />
@@ -191,7 +191,7 @@
       </console-settings>
     </option>
   </component>
-  <component name="RunManager" selected="Python.dispatch">
+  <component name="RunManager" selected="Python tests.UnitTests in dispatch">
     <configuration default="false" name="Sample" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -476,45 +476,46 @@
     <option name="remove_strategy" value="false" />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_Tests_(TDD) - 2017.03.20 at 19h 45m 48s.xml">
+    <history-entry file="All_Tests_(TDD) - 2017.03.20 at 20h 15m 45s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.03.20 at 19h 51m 38s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.03.20 at 19h 59m 55s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.03.20 at 20h 05m 03s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.03.20 at 20h 09m 18s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.03.20 at 20h 10m 32s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="UnitTests_in_dispatch - 2017.03.20 at 20h 11m 19s.xml">
+    <history-entry file="UnitTests_in_dispatch - 2017.03.20 at 20h 18m 51s.xml">
       <configuration name="UnitTests in dispatch" configurationId="tests" />
     </history-entry>
-    <history-entry file="UnitTests_in_dispatch - 2017.03.20 at 20h 12m 30s.xml">
+    <history-entry file="UnitTests_in_dispatch - 2017.03.20 at 20h 19m 21s.xml">
       <configuration name="UnitTests in dispatch" configurationId="tests" />
     </history-entry>
-    <history-entry file="UnitTests_in_dispatch - 2017.03.20 at 20h 13m 18s.xml">
+    <history-entry file="UnitTests_in_dispatch - 2017.03.20 at 20h 19m 33s.xml">
       <configuration name="UnitTests in dispatch" configurationId="tests" />
     </history-entry>
-    <history-entry file="UnitTests_in_dispatch - 2017.03.20 at 20h 14m 24s.xml">
+    <history-entry file="UnitTests_in_dispatch - 2017.03.20 at 20h 21m 38s.xml">
+      <configuration name="UnitTests in dispatch" configurationId="tests" />
+    </history-entry>
+    <history-entry file="UnitTests_in_dispatch - 2017.03.20 at 20h 22m 49s.xml">
+      <configuration name="UnitTests in dispatch" configurationId="tests" />
+    </history-entry>
+    <history-entry file="UnitTests_in_dispatch - 2017.03.20 at 20h 23m 20s.xml">
+      <configuration name="UnitTests in dispatch" configurationId="tests" />
+    </history-entry>
+    <history-entry file="UnitTests_in_dispatch - 2017.03.20 at 20h 24m 45s.xml">
+      <configuration name="UnitTests in dispatch" configurationId="tests" />
+    </history-entry>
+    <history-entry file="UnitTests_in_dispatch - 2017.03.20 at 20h 24m 54s.xml">
+      <configuration name="UnitTests in dispatch" configurationId="tests" />
+    </history-entry>
+    <history-entry file="UnitTests_in_dispatch - 2017.03.20 at 20h 28m 48s.xml">
       <configuration name="UnitTests in dispatch" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-13" y="-13" width="3026" height="1946" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.047023006" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2094046" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978094" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978094" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.48490232" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48490232" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31024274" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -522,7 +523,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -703,7 +703,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ZGW0001Assignment03/SampleTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-495">
+        <state relative-caret-position="-4653">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
@@ -723,8 +723,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ZGW0001Assignment04/dispatch.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1254">
-          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+        <state relative-caret-position="1056">
+          <caret line="32" column="29" lean-forward="false" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
           <folding />
         </state>
       </provider>

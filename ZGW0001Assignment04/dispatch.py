@@ -4,7 +4,6 @@ def dispatch(values=None):
 
     #Validate parm
     if(values == None):
-        print("Hello")
         return {'error': 'parameter is missing'}
     if(not(isinstance(values,dict))):
         return {'error': 'parameter is not a dictionary'}
@@ -30,9 +29,7 @@ def dispatch(values=None):
 
 class DispatchTest(unittest.TestCase):
     def test100_010_ShouldRaiseExceptionNoParameters(self):
-        expected_string = "error: parameter is missing"
-        with self.assertRaises(ValueError) as context:
-            dispatch()
-        self.assertAlmostEquals(expected_string, context.exception.args[0][0:len(expected_string)])
+        expected_result = {'error': 'parameter is missing'}
+        self.assertDictEqual(expected_result, dispatch())
 
-# dispatch()
+print(dispatch())
