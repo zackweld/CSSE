@@ -1,3 +1,5 @@
+import unittest
+
 def dispatch(values=None):
 
     #Validate parm
@@ -21,3 +23,17 @@ def dispatch(values=None):
     else:
         values['error'] = 'op is not a legal operation'
         return values
+
+
+# Test Cases
+
+class dispatchTest(unittest.TestCase):
+    def test100_010_ShouldRaiseExceptionNoParameters(self):
+        expected_string = "\'error\': \'parameter is missing\'"
+        print("Hello")
+        with self.assertRaises(ValueError) as context:
+            dispatch()
+        self.assertAlmostEquals(expected_string, context.exception.args[0][0:len(expected_string)])
+
+
+print("Hello")
