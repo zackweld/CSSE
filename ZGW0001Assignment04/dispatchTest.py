@@ -1,12 +1,12 @@
 import unittest
-import dispatch
+import \ZGW0001Assignment04.dispatch
 
 class DispatchTest(unittest.TestCase):
 
     # Validating the input for dispatch
     # Must be a dictionary of one or more key-value pairs
     def test100_010_DispatchNoParameter(self):
-        expected_result = {'error': 'parameter is missing'}
+        expected_result = {}
         self.assertDictEqual(expected_result, dispatch.dispatch())
 
     # def test100_020_DispatchNotADictionary(self):
