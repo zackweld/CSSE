@@ -16,7 +16,7 @@ def dispatch(values=None):
         if (not('observation' in values)):
             return {'error': 'mandatory information missing'}
 
-
+        
 
 
         return values    #<-------------- replace this with your implementation
