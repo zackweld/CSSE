@@ -14,7 +14,7 @@ class DispatchTest(unittest.TestCase):
         self.assertDictEqual(expected_result, dispatch.dispatch("hello"))
 
     def test100_030_DispatchNoOpSpecified(self):
-        expected_result = {}
+        expected_result = {'temperature': '72', 'error': 'no op is specified'}
         self.assertEquals(expected_result, dispatch.dispatch({'temperature': '72'}))
 
 
