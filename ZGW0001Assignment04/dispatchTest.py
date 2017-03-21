@@ -67,4 +67,8 @@ class DispatchTest(unittest.TestCase):
 # Check inputs
 
     def test200_010_AdjustMissingNecessaryValues(self):
-        
+        expected_result = {'error': 'mandatory information missing'}
+        missingObservation = {'op': 'adjust', 'horizon': 'natural'}
+        missingHorizon = {'op': 'adjust', 'observation': '50'}
+        self.assertDictEqual(expected_result, dispatch.dispatch(missingObservation))
+        self.assertDictEqual(expected_result, dispatch.dispatch(missingHorizon))
