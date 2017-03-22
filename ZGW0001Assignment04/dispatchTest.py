@@ -182,5 +182,6 @@ class DispatchTest(unittest.TestCase):
     #                         'altitude': '41d59.0'}
 
     def test300_020_ConvertToCelsius(self):
-        expected_result = 
+        expected_result = 29.4444
+        self.assertAlmostEqual(expected_result, dispatch.convert_to_celsius(85), 2)
 
