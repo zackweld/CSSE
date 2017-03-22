@@ -143,3 +143,9 @@ class DispatchTest(unittest.TestCase):
             horizon = 'natural'
         self.assertEquals(horizon, 'natural')
 
+    def test200_100_AdjustHorizonIsInvalid(self):
+        call = {'op': 'adjust', 'observation': '45d30.0', 'horizon': 'random'}
+        expected_result = {'op': 'adjust', 'observation': '45d30.0', 'horizon': 'random', 'error': 'horizon is invalid'}
+        self.assertDictEqual(expected_result, dispatch.dispatch(call))
+        
+
