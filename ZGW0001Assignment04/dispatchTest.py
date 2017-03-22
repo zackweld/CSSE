@@ -198,6 +198,5 @@ class DispatchTest(unittest.TestCase):
         obs_minutes = float(observation[observation.find('d')+1: len(observation)])
         obs = obs_degrees + (obs_minutes / 60)
         expected_result = 30.025
-        obs = 0
         self.assertAlmostEqual(expected_result, obs, 4)
 
