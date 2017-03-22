@@ -200,3 +200,8 @@ class DispatchTest(unittest.TestCase):
         expected_result = 30.025
         self.assertAlmostEqual(expected_result, obs, 5)
 
+    def test300_050_AdjustCalculatRefraction(self):
+        expected_result = -0.0258595
+        refraction = 0
+        self.assertAlmostEqual(expected_result, refraction)
+
