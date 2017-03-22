@@ -202,6 +202,10 @@ class DispatchTest(unittest.TestCase):
 
     def test300_050_AdjustCalculatRefraction(self):
         expected_result = -0.0258595
-        refraction = 0
+        pressure = 1000
+        cels = 29.4444
+        observation = 30.025
+        refraction = (-0.00452) * pressure / (273+cels) / (math.tan(observation))
+
         self.assertAlmostEqual(expected_result, refraction)
 
