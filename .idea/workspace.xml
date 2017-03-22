@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ba02728e-0b89-4d8b-b5a2-437cf818b6ac" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ZGW0001Assignment04/dispatch.py" afterPath="$PROJECT_DIR$/ZGW0001Assignment04/dispatch.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ZGW0001Assignment04/dispatchTest.py" afterPath="$PROJECT_DIR$/ZGW0001Assignment04/dispatchTest.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -42,17 +41,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dispatch.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="dispatch.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ZGW0001Assignment04/dispatch.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-874">
-              <caret line="37" column="26" lean-forward="false" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
+            <state relative-caret-position="413">
+              <caret line="83" column="0" lean-forward="true" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dispatchTest.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dispatchTest.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ZGW0001Assignment04/dispatchTest.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="715">
@@ -98,8 +97,8 @@
         <option value="$PROJECT_DIR$/ZGW0001Assignment03/Sample.py" />
         <option value="$PROJECT_DIR$/ZGW0001Assignment03/SampleTest.py" />
         <option value="$PROJECT_DIR$/ZGW0001Assignment04/lambda_function.py" />
-        <option value="$PROJECT_DIR$/ZGW0001Assignment04/dispatch.py" />
         <option value="$PROJECT_DIR$/ZGW0001Assignment04/dispatchTest.py" />
+        <option value="$PROJECT_DIR$/ZGW0001Assignment04/dispatch.py" />
       </list>
     </option>
   </component>
@@ -554,9 +553,6 @@
     <option name="remove_strategy" value="false" />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_Tests_(TDD) - 2017.03.21 at 20h 26m 23s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
     <history-entry file="All_Tests_(TDD) - 2017.03.21 at 20h 29m 33s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
@@ -582,6 +578,9 @@
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
     <history-entry file="All_Tests_(TDD) - 2017.03.21 at 20h 43m 59s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.03.21 at 21h 13m 03s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
   </component>
@@ -1006,14 +1005,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ZGW0001Assignment04/dispatch.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-874">
-          <caret line="37" column="26" lean-forward="false" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ZGW0001Assignment04/dispatchTest.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="715">
@@ -1024,6 +1015,14 @@
             <marker date="1490148349898" expanded="true" signature="217:2262" ph="..." />
             <marker date="1490148349898" expanded="true" signature="350:2262" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ZGW0001Assignment04/dispatch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="83" column="0" lean-forward="true" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

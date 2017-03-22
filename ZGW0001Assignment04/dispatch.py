@@ -1,4 +1,4 @@
-import unittest
+import math
 
 def dispatch(values=None):
 
@@ -69,10 +69,34 @@ def dispatch(values=None):
                 values['error'] = 'horizon is invalid'
                 return values
 
+
         # Check to see if altitude is already in dictionary
         if ('altitude' in values):
             values['error'] = 'altitude is in input'
             return values
+
+        # Calculation
+        dip = 0
+        if (horizon == 'natural'):
+            dip = (-0.97 * math.sqrt(height)) / 60
+
+        obsDegrees = float(degrees) + (minutes / 60)
+
+        refraction = (-0.00452*pressure) / (273+convert_to_celsius(temp)) / \
+                     math.tan(obsDegrees)
+
+        altitude = obsDegrees + dip + refraction
+
+        altDegrees = str(altitude)[0:'.']
+
+        altitude = (altitude - int(altDegrees)) * 60
+
+        altMinutes = str(altitude)[0:'.']
+
+        fullAltitude = altDegrees.concat(altMinutes)
+
+        values['altitude'] = fullAltitude
+
 
         return values    #<-------------- replace this with your implementation
     elif(values['op'] == 'predict'):
@@ -87,3 +111,6 @@ def dispatch(values=None):
         return values
 
 
+def convert_to_celsius(temp):
+    cels = (temp - 32) * (5/9)
+    return cels
