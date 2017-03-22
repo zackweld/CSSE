@@ -113,5 +113,5 @@ def dispatch(values=None):
 
 
 def convert_to_celsius(temp):
-    cels = float(temp - 32) * (5/9)
+    cels = float(temp - 32) * 5 / 9
     return cels
