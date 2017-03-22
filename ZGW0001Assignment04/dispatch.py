@@ -23,7 +23,7 @@ def dispatch(values=None):
             return values
 
         # Confirm observation values within range
-        degrees = int(obs[0:obs.find('d')])
+        degrees = float(obs[0:obs.find('d')])
         minutes = float(obs[obs.find('d')+1:len(obs)])
         if (degrees < 0 or degrees > 90 or minutes < 0 or minutes > 60):
             values['error'] = 'observation is invalid'
@@ -82,7 +82,7 @@ def dispatch(values=None):
         if (horizon == 'natural'):
             dip = (-0.97 * math.sqrt(height)) / 60
 
-        obsDegrees = float(degrees) + (minutes / 60)
+        obsDegrees = degrees + (minutes / 60)
 
         refraction = (-0.00452*pressure) / (273+convert_to_celsius(temp)) / \
                      math.tan(obsDegrees)
