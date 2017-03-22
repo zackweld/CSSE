@@ -87,13 +87,13 @@ def dispatch(values=None):
 
         altitude = obsDegrees + dip + refraction
 
-        altDegrees = str(altitude)[0:'.']
+        altDegrees = str(altitude)[0:str(altitude).find('.')]
 
         altitude = (altitude - int(altDegrees)) * 60
 
-        altMinutes = str(altitude)[0:'.']
+        altMinutes = str(altitude)[0:str(altitude).find('.')]
 
-        fullAltitude = altDegrees.concat(altMinutes)
+        fullAltitude = altDegrees + altMinutes
 
         values['altitude'] = fullAltitude
 
