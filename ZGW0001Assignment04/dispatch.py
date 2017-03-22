@@ -93,7 +93,7 @@ def dispatch(values=None):
 
         altitude = (altitude - int(altDegrees)) * 60
 
-        altMinutes = str(altitude)[0:str(altitude).find('.')]
+        altMinutes = str(altitude)[0:str(altitude).find('.')+2]
 
         fullAltitude = altDegrees + 'd' + altMinutes
 
