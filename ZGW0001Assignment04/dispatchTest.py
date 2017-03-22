@@ -96,7 +96,8 @@ class DispatchTest(unittest.TestCase):
 
     def test200_030_AdjustHeightLeftOutSetToZero(self):
         call = {'op': 'adjust', 'observation': '45d30.0'}
-        expected_result = {'op'}
+        height = -1
+        self.assertEquals(height, 0)
 
     # def test200_040_AdjustHeightIsInvalid(self):
     #     expected_result = {'op': 'adjust', 'observation': '45d30.0', 'height': '-1', 'error': 'height is invalid'}
