@@ -205,7 +205,7 @@ class DispatchTest(unittest.TestCase):
         pressure = 1000
         cels = 29.4444
         observation = 30.025
-        refraction = (math.tan(observation))
+        refraction = (-0.00452) * pressure / (273+cels) / (math.tan(observation * 180 / math.pi))
 
         self.assertAlmostEqual(expected_result, refraction, 4)
 
