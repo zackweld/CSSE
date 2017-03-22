@@ -192,3 +192,12 @@ class DispatchTest(unittest.TestCase):
         dip = (-0.97) * math.sqrt(height) / 60
         self.assertAlmostEqual(expected_result, dip, 4)
 
+    def test300_040_AdjustCalculateMinToDegrees(self):
+        observation = '30d1.5'
+        obs_degrees = float(observation[0:observation.find('d')])
+        obs_minutes = float(observation[observation.find('d')+1: len(observation)])
+        obs = obs_degrees + (obs_minutes / 60)
+        expected_result = 30.025
+        obs = 0
+        self.assertAlmostEqual(expected_result, obs, 4)
+
