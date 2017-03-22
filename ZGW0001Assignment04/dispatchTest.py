@@ -124,6 +124,6 @@ class DispatchTest(unittest.TestCase):
     def test200_070_AdjustPressureIsLeftOut(self):
         call = {'op': 'adjust', 'observation': '45d30.0'}
         pressure = 0
-        if (not('pressure' not in call)):
+        if (not('pressure' in call)):
             pressure = 1010
         self.assertEquals(pressure, 1010)
