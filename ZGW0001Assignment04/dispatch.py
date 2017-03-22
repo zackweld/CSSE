@@ -69,6 +69,11 @@ def dispatch(values=None):
                 values['error'] = 'horizon is invalid'
                 return values
 
+        # Check to see if altitude is already in dictionary
+        if ('altitude' in values):
+            values['error'] = 'altitude is in input'
+            return values
+
         return values    #<-------------- replace this with your implementation
     elif(values['op'] == 'predict'):
         return values    #This calculation is stubbed out

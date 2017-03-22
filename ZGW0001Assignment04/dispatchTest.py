@@ -150,7 +150,7 @@ class DispatchTest(unittest.TestCase):
 
     def test200_110_AdjustAltitudeAlreadyInDict(self):
         call = {'op': 'adjust', 'observation': '45d30.0', 'altitude': '50'}
-        expected_result = {'op': 'adjust', 'observation': '45d30.0', 'altitude': '50', 'error': 'altitude already in dictionary'}
+        expected_result = {'op': 'adjust', 'observation': '45d30.0', 'altitude': '50', 'error': 'altitude is in input'}
         self.assertDictEqual(expected_result, dispatch.dispatch(call))
 
 
