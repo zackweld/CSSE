@@ -97,7 +97,7 @@ class DispatchTest(unittest.TestCase):
     def test200_030_AdjustHeightLeftOutSetToZero(self):
         call = {'op': 'adjust', 'observation': '45d30.0'}
         height = -1
-        if (not('height' in values)):
+        if (not('height' in call)):
             height = 0;
         self.assertEquals(height, 0)
 
