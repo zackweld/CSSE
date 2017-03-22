@@ -1,5 +1,6 @@
 import unittest
 import dispatch
+import math
 
 class DispatchTest(unittest.TestCase):
 
@@ -158,30 +159,36 @@ class DispatchTest(unittest.TestCase):
 # Check Calculations
 #########################
 
-    def test300_010_AdjustValidCalculation(self):
-        call = {'observation': '30d1.5', 'height': '19.0', 'pressure': '1000',
-                'horizon': 'artificial', 'op': 'adjust', 'temperature': '85'}
-        expected_result = {'observation': '30d1.5', 'height': '19.0', 'pressure': '1000',
-                'horizon': 'artificial', 'op': 'adjust', 'temperature': '85',
-                           'altitude': '29d59.9'}
-        self.assertDictEqual(expected_result, dispatch.dispatch(call))
-
-        call2 = {'observation': '45d15.2', 'height': '6', 'pressure': '1010',
-                'horizon': 'natural', 'op': 'adjust', 'temperature': '71'}
-        expected_result2 = {'observation': '45d15.2', 'height': '6', 'pressure': '1010',
-                'horizon': 'natural', 'op': 'adjust', 'temperature': '71',
-                            'altitude': '45d11.9'}
-        self.assertDictEqual(expected_result2, dispatch.dispatch(call2))
-
-        call3 = {'observation': '42d0.0', 'op': 'adjust'}
-        expected_result3 = {'observation': '42d0.0', 'op': 'adjust', 'altitude': '41d59.0'}
-        self.assertDictEqual(expected_result3, dispatch.dispatch(call3))
-
-        call4 = {'observation': '42d0.0', 'op': 'adjust', 'extraKey': 'ignore'}
-        expected_result4 = {'observation': '42d0.0', 'op': 'adjust', 'extraKey': 'ignore',
-                            'altitude': '41d59.0'}
+    # def test300_010_AdjustValidCalculation(self):
+    #     call = {'observation': '30d1.5', 'height': '19.0', 'pressure': '1000',
+    #             'horizon': 'artificial', 'op': 'adjust', 'temperature': '85'}
+    #     expected_result = {'observation': '30d1.5', 'height': '19.0', 'pressure': '1000',
+    #             'horizon': 'artificial', 'op': 'adjust', 'temperature': '85',
+    #                        'altitude': '29d59.9'}
+    #     self.assertDictEqual(expected_result, dispatch.dispatch(call))
+    #
+    #     call2 = {'observation': '45d15.2', 'height': '6', 'pressure': '1010',
+    #             'horizon': 'natural', 'op': 'adjust', 'temperature': '71'}
+    #     expected_result2 = {'observation': '45d15.2', 'height': '6', 'pressure': '1010',
+    #             'horizon': 'natural', 'op': 'adjust', 'temperature': '71',
+    #                         'altitude': '45d11.9'}
+    #     self.assertDictEqual(expected_result2, dispatch.dispatch(call2))
+    #
+    #     call3 = {'observation': '42d0.0', 'op': 'adjust'}
+    #     expected_result3 = {'observation': '42d0.0', 'op': 'adjust', 'altitude': '41d59.0'}
+    #     self.assertDictEqual(expected_result3, dispatch.dispatch(call3))
+    #
+    #     call4 = {'observation': '42d0.0', 'op': 'adjust', 'extraKey': 'ignore'}
+    #     expected_result4 = {'observation': '42d0.0', 'op': 'adjust', 'extraKey': 'ignore',
+    #                         'altitude': '41d59.0'}
 
     def test300_020_ConvertToCelsius(self):
         expected_result = 29.4444
         self.assertAlmostEqual(expected_result, dispatch.convert_to_celsius(85), 2)
+
+    def test300_030_AdjustCalculateDip(self):
+        height = 19
+        expected_result = -0.0704689
+        dip = 0
+        self.assertAlmostEqual(expected_result, dip)
 
