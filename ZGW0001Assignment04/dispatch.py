@@ -31,6 +31,8 @@ def dispatch(values=None):
             values['error'] = 'observation is invalid'
 
         # If height is missing default to 0
+        if (not('height' in values)):
+            height = 0
 
 
         return values    #<-------------- replace this with your implementation
