@@ -78,25 +78,26 @@ def dispatch(values=None):
             return values
 
         # Calculation
-        dip = 0
+
         if (horizon == 'natural'):
             dip = (-0.97 * math.sqrt(height)) / 60
+        else:
+            dip = 0
 
-        obsDegrees = degrees + (minutes / 60)
+        observation = degrees + (minutes / 60)
+        refraction = ((-0.00452)*pressure) / (273+convert_to_celsius(temp)) / math.tan(observation)
+        alt = observation + dip + refraction
 
-        refraction = (-0.00452*pressure) / (273.0+convert_to_celsius(temp)) / (math.tan(obsDegrees))
+        alt_degrees = int(alt)
 
-        altitude = obsDegrees + dip + refraction
+        alt = (alt - alt_degrees) * 60
 
-        altDegrees = str(altitude)[0:str(altitude).find('.')]
+        alt_minutes = str(alt)[0:str(alt).find('.')+2]
 
-        altitude = (altitude - int(altitude)) * 60
+        altitude = str(alt_degrees) + 'd' + alt_minutes
 
-        altMinutes = str(altitude)[0:str(altitude).find('.')+2]
+        values['altitude'] = altitude
 
-        fullAltitude = altDegrees + 'd' + altMinutes
-
-        values['altitude'] = fullAltitude
 
 
         return values    #<-------------- replace this with your implementation
