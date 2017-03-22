@@ -135,3 +135,9 @@ class DispatchTest(unittest.TestCase):
         expected_result2 = {'op': 'adjust', 'observation': '45d30.0', 'pressure': '1101', 'error': 'pressure is invalid'}
         self.assertDictEqual(expected_result, dispatch.dispatch(call))
         self.assertDictEqual(expected_result2, dispatch.dispatch(call2))
+
+    def test200_090AdjustHorizonIsLeftOut(self):
+        call = {'op': 'adjust', 'observation': '45d30.0'}
+        horizon = 'random'
+        self.assertEquals(horizon, 'natural')
+        

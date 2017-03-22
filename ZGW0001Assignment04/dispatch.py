@@ -53,6 +53,14 @@ def dispatch(values=None):
         # If pressure is missing default to 1010
         if (not('pressure' in values)):
             pressure = 1010
+        else:
+            # Check for invalid pressure inputs
+            pressure = int(values['pressure'])
+            if (pressure < 100 or pressure > 1100):
+                values['error'] = 'pressure is invalid'
+                return values
+
+        # If horizon is missing default to natural
 
 
 
