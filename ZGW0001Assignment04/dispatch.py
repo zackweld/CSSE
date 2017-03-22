@@ -47,7 +47,7 @@ def dispatch(values=None):
             temp = 72
         else:
             # If pressure is invalide return error
-            temp = int(values['temperature'])
+            temp = float(values['temperature'])
             if (temp < -20 or temp > 120):
                 values['error'] = 'temperature is invalid'
                 return values
