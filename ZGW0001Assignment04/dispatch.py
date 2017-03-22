@@ -84,7 +84,7 @@ def dispatch(values=None):
 
         obsDegrees = degrees + (minutes / 60)
 
-        refraction = (-0.00452*pressure) / (273+convert_to_celsius(temp)) / math.tan(obsDegrees)
+        refraction = (-0.00452*pressure) / (273.0+convert_to_celsius(temp)) / math.tan(obsDegrees)
 
         altitude = obsDegrees + dip + refraction
 
