@@ -84,14 +84,13 @@ def dispatch(values=None):
 
         obsDegrees = degrees + (minutes / 60)
 
-        refraction = (-0.00452*pressure) / (273+convert_to_celsius(temp)) / \
-                     math.tan(obsDegrees)
+        refraction = (-0.00452*pressure) / (273+convert_to_celsius(temp)) / math.tan(obsDegrees)
 
         altitude = obsDegrees + dip + refraction
 
         altDegrees = str(altitude)[0:str(altitude).find('.')]
 
-        altitude = (altitude - int(altDegrees)) * 60
+        altitude = (altitude - int(altitude)) * 60
 
         altMinutes = str(altitude)[0:str(altitude).find('.')+2]
 
@@ -114,5 +113,5 @@ def dispatch(values=None):
 
 
 def convert_to_celsius(temp):
-    cels = (temp - 32) * (5/9)
+    cels = float(temp - 32) * (5/9)
     return cels
