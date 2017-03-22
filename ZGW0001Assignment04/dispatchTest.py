@@ -98,7 +98,7 @@ class DispatchTest(unittest.TestCase):
         call = {'op': 'adjust', 'observation': '45d30.0'}
         height = -1
         if (not('height' in call)):
-            height = 0;
+            height = 0
         self.assertEquals(height, 0)
 
     def test200_040_AdjustHeightIsInvalid(self):
@@ -106,7 +106,14 @@ class DispatchTest(unittest.TestCase):
         call = {'op': 'adjust', 'observation': '45d30.0', 'height': '-1'}
         self.assertDictEqual(expected_result, dispatch.dispatch(call))
 
-    def test200_040_AdjustTempIsLeftOut(self):
+    def test200_050_AdjustTempIsLeftOut(self):
         call = {'op': 'adjust', 'observation': '45d30.0'}
         temp = 0
+        if (not('temperature' in call)):
+            temp = 72
         self.assertEquals(temp, 72)
+
+    def test200_060_AdjustTempIsInvalid(self):
+        expected_result = {'op': 'adjust', 'observation': '45d30.0', 'height': '-1', 'error': 'height is invalid'}
+        call = {'op': 'adjust', 'observation': '45d30.0', 'height': '-1'}
+        self.assertDictEqual(expected_result, dispatch.dispatch(call))
