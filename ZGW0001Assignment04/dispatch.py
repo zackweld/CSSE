@@ -27,8 +27,10 @@ def dispatch(values=None):
         minutes = float(obs[obs.find('d')+1:len(obs)])
         if (degrees < 0 or degrees > 90 or minutes < 0 or minutes > 60):
             values['error'] = 'observation is invalid'
+            return values
         if (degrees == 0 and minutes < 0.1):
             values['error'] = 'observation is invalid'
+            return values
 
         # If height is missing default to 0
         if (not('height' in values)):
