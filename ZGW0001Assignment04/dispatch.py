@@ -35,7 +35,7 @@ def dispatch(values=None):
             height = 0
         # If height is less than zero send error
         else:
-            height = int(values['height'])
+            height = float(values['height'])
             if (height < 0):
                 values['error'] = 'height is invalid'
                 return values
