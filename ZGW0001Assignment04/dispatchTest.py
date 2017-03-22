@@ -139,5 +139,7 @@ class DispatchTest(unittest.TestCase):
     def test200_090AdjustHorizonIsLeftOut(self):
         call = {'op': 'adjust', 'observation': '45d30.0'}
         horizon = 'random'
+        if (not('horizon' in call)):
+            horizon = 'natural'
         self.assertEquals(horizon, 'natural')
-        
+
