@@ -127,3 +127,11 @@ class DispatchTest(unittest.TestCase):
         if (not('pressure' in call)):
             pressure = 1010
         self.assertEquals(pressure, 1010)
+
+    def test200_080_AdjustPressureIsInvalid(self):
+        call = {'op': 'adjust', 'observation': '45d30.0', 'pressure': '99'}
+        call2 = {'op': 'adjust', 'observation': '45d30.0', 'pressure': '1101'}
+        expected_result = {'op': 'adjust', 'observation': '45d30.0', 'pressure': '99', 'error': 'pressure is invalid'}
+        expected_result2 = {'op': 'adjust', 'observation': '45d30.0', 'pressure': '1101', 'error': 'pressure is invalid'}
+        self.assertDictEqual(expected_result, dispatch.dispatch(call))
+        self.assertDictEqual(expected_result2, dispatch.dispatch(call2))
