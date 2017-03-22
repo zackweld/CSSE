@@ -120,3 +120,8 @@ class DispatchTest(unittest.TestCase):
         call2 = {'op': 'adjust', 'observation': '45d30.0', 'temperature': '121'}
         self.assertDictEqual(expected_result, dispatch.dispatch(call))
         self.assertDictEqual(expected_result2, dispatch.dispatch(call2))
+
+    def test200_070_AdjustPressureIsLeftOut(self):
+        call = {'op': 'adjust', 'observation': '45d30.0'}
+        pressure = 0
+        self.assertEquals(pressure, 1010)
