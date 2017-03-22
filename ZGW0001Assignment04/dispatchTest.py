@@ -147,5 +147,5 @@ class DispatchTest(unittest.TestCase):
         call = {'op': 'adjust', 'observation': '45d30.0', 'horizon': 'random'}
         expected_result = {'op': 'adjust', 'observation': '45d30.0', 'horizon': 'random', 'error': 'horizon is invalid'}
         self.assertDictEqual(expected_result, dispatch.dispatch(call))
-        
+
 

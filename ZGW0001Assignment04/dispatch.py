@@ -61,8 +61,13 @@ def dispatch(values=None):
                 return values
 
         # If horizon is missing default to natural
-
-
+        if (not('horizon' in values)):
+            horizon = 'natural'
+        else:
+            horizon = values['horizon']
+            if (not(horizon.equals('artificial') or horizon.equals('natural'))):
+                values['error'] = 'horizon is invalid'
+                return values
 
         return values    #<-------------- replace this with your implementation
     elif(values['op'] == 'predict'):
