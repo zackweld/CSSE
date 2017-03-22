@@ -65,7 +65,7 @@ def dispatch(values=None):
             horizon = 'natural'
         else:
             horizon = values['horizon']
-            if (not(horizon.equals('artificial') or horizon.equals('natural'))):
+            if (not(horizon == 'artificial' or horizon == 'natural')):
                 values['error'] = 'horizon is invalid'
                 return values
 

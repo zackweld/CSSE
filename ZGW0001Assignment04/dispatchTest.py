@@ -148,4 +148,8 @@ class DispatchTest(unittest.TestCase):
         expected_result = {'op': 'adjust', 'observation': '45d30.0', 'horizon': 'random', 'error': 'horizon is invalid'}
         self.assertDictEqual(expected_result, dispatch.dispatch(call))
 
+    def test200_110_AdjustAltitudeAlreadyInDict(self):
+        call = {'op': 'adjust', 'observation': '45d30.0', 'altitude': '50'}
+        expected_result
+
 
