@@ -21,7 +21,7 @@ def dispatch(values=None):
         degrees = int(obs[0:obs.find('d')])
         # minutes = float(obs.substring(obs.indexOf('d')+1, obs.length))
         minutes = float(obs[obs.find('d')+1:len(obs)])
-        if (not(obs.contains('d')) or degrees < 0 or degrees > 90 or minutes < 0 or minutes > 60):
+        if ('d' not in obs or degrees < 0 or degrees > 90 or minutes < 0 or minutes > 60):
             values['error'] = 'observation is invalid'
         if (degrees == 0 and minutes < 0.1):
             values['error'] = 'observation is invalid'

@@ -74,11 +74,16 @@ class DispatchTest(unittest.TestCase):
         # self.assertDictEqual(expected_result, dispatch.dispatch(missingHorizon))
 
     def test200_020_AdjustObservationInvalid(self):
-        expected_result = {'op': 'adjust', 'horizon': 'natural', 'observation': '91', 'error': 'observation is invalid'}
+        expected_result = {'op': 'adjust', 'horizon': 'natural', 'observation': '91d00.0', 'error': 'observation is invalid'}
+        expected_result2 = {'op': 'adjust', 'horizon': 'natural', 'observation': '-1d05.0'}
+        expected_result3 = {'op': 'adjust', 'horizon': 'natural', 'observation': '45d-05.0'}
+        expected_result4 = {'op': 'adjust', 'horizon': 'natural', 'observation': '5d61.0'}
+        expected_result5 = {'op': 'adjust', 'horizon': 'natural', 'observation': '000.0'}
+        expected_result6 = {'op': 'adjust', 'horizon': 'natural', 'observation': '0d00.0'}
         call = {'op': 'adjust', 'horizon': 'natural', 'observation': '91d00.0'}
-        call2 = {'op': 'adjust', 'horizon': 'natural', 'observation': '-1d00.0'}
+        call2 = {'op': 'adjust', 'horizon': 'natural', 'observation': '-1d05.0'}
         call3 = {'op': 'adjust', 'horizon': 'natural', 'observation': '45d-05.0'}
-        call4 = {'op': 'adjust', 'horizon': 'natural', 'observation': '0d61.0'}
+        call4 = {'op': 'adjust', 'horizon': 'natural', 'observation': '5d61.0'}
         call5 = {'op': 'adjust', 'horizon': 'natural', 'observation': '000.0'}
         call6 = {'op': 'adjust', 'horizon': 'natural', 'observation': '0d00.0'}
         self.assertDictEqual(expected_result, dispatch.dispatch(call))
