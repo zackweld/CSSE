@@ -16,18 +16,21 @@ def dispatch(values=None):
         if (not('observation' in values)):
             return {'error': 'mandatory information missing'}
 
+        # Check observation correct form
         obs = values['observation']
         if ('d' not in obs):
             values['error'] = 'observation is invalid'
             return values
-        # degrees = int(obs.substring(0, obs.indexOf('d')))
+
+        # Confirm observation values within range
         degrees = int(obs[0:obs.find('d')])
-        # minutes = float(obs.substring(obs.indexOf('d')+1, obs.length))
         minutes = float(obs[obs.find('d')+1:len(obs)])
         if (degrees < 0 or degrees > 90 or minutes < 0 or minutes > 60):
             values['error'] = 'observation is invalid'
         if (degrees == 0 and minutes < 0.1):
             values['error'] = 'observation is invalid'
+
+        # If height is missing default to 0
 
 
         return values    #<-------------- replace this with your implementation

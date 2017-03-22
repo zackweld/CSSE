@@ -94,3 +94,12 @@ class DispatchTest(unittest.TestCase):
         self.assertDictEqual(expected_result6, dispatch.dispatch(call6))
 
 
+    def test200_030_AdjustHeightLeftOutSetToZero(self):
+        call = {'op': 'adjust', 'observation': '45d30.0'}
+        expected_result = {'op'}
+
+    # def test200_040_AdjustHeightIsInvalid(self):
+    #     expected_result = {'op': 'adjust', 'observation': '45d30.0', 'height': '-1', 'error': 'height is invalid'}
+    #     call = {'op': 'adjust', 'observation': '45d30.0', 'height': '-1'}
+    #     self.assertDictEqual(expected_result, dispatch.dispatch(call))
+
