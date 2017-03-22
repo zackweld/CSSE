@@ -40,7 +40,7 @@ def dispatch(values=None):
                 values['error'] = 'height is invalid'
 
         # If temp is missing default to 72
-        
+
 
         return values    #<-------------- replace this with your implementation
     elif(values['op'] == 'predict'):

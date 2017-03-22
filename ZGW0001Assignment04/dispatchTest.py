@@ -106,3 +106,7 @@ class DispatchTest(unittest.TestCase):
         call = {'op': 'adjust', 'observation': '45d30.0', 'height': '-1'}
         self.assertDictEqual(expected_result, dispatch.dispatch(call))
 
+    def test200_040_AdjustTempIsLeftOut(self):
+        call = {'op': 'adjust', 'observation': '45d30.0'}
+        temp = 0
+        self.assertEquals(temp, 72)
