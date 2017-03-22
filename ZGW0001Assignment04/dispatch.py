@@ -57,7 +57,7 @@ def dispatch(values=None):
             pressure = 1010
         else:
             # Check for invalid pressure inputs
-            pressure = int(values['pressure'])
+            pressure = float(values['pressure'])
             if (pressure < 100 or pressure > 1100):
                 values['error'] = 'pressure is invalid'
                 return values
