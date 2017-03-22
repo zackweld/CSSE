@@ -187,8 +187,8 @@ class DispatchTest(unittest.TestCase):
         self.assertAlmostEqual(expected_result, dispatch.convert_to_celsius(85), 2)
 
     def test300_030_AdjustCalculateDip(self):
-        height = 19
+        height = 19.0
         expected_result = -0.0704689
-        dip = 0
-        self.assertAlmostEqual(expected_result, dip)
+        dip = (-0.97) * math.sqrt(height) / 60
+        self.assertAlmostEqual(expected_result, dip, 4)
 
