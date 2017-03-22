@@ -33,9 +33,14 @@ def dispatch(values=None):
         # If height is missing default to 0
         if (not('height' in values)):
             height = 0
+        # If height is less than zero send error
         else:
-            if (values['height'] < 0):
+            height = int(values['height'])
+            if (height < 0):
                 values['error'] = 'height is invalid'
+
+        # If temp is missing default to 72
+        
 
         return values    #<-------------- replace this with your implementation
     elif(values['op'] == 'predict'):
