@@ -85,7 +85,7 @@ def dispatch(values=None):
             dip = 0
 
         observation = degrees + (minutes / 60)
-        refraction = ((-0.00452)*pressure) / (273+convert_to_celsius(temp)) / math.tan(observation)
+        refraction = ((-0.00452)*pressure) / (273+convert_to_celsius(temp)) / math.tan(observation * math.pi / 180)
         alt = observation + dip + refraction
 
         alt_degrees = int(alt)
