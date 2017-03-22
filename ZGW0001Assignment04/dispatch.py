@@ -38,8 +38,16 @@ def dispatch(values=None):
             height = int(values['height'])
             if (height < 0):
                 values['error'] = 'height is invalid'
+                return values
 
         # If temp is missing default to 72
+        if (not('temperature' in values)):
+            temp = 72
+        else:
+            temp = int(values['temperature'])
+            if (temp < -20 or temp > 120):
+                values[{'error': 'temperature is invalid'}]
+                return values
 
 
         return values    #<-------------- replace this with your implementation

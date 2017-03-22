@@ -114,6 +114,9 @@ class DispatchTest(unittest.TestCase):
         self.assertEquals(temp, 72)
 
     def test200_060_AdjustTempIsInvalid(self):
-        expected_result = {'op': 'adjust', 'observation': '45d30.0', 'height': '-1', 'error': 'height is invalid'}
-        call = {'op': 'adjust', 'observation': '45d30.0', 'height': '-1'}
+        expected_result = {'op': 'adjust', 'observation': '45d30.0', 'temperature': '-21', 'error': 'temperature is invalid'}
+        expected_result2 = {'op': 'adjust', 'observation': '45d30.0', 'temperature': '121', 'error': 'temperature is invalid'}
+        call = {'op': 'adjust', 'observation': '45d30.0', 'height': '-21'}
+        call2 = {'op': 'adjust', 'observation': '45d30.0', 'height': '121'}
         self.assertDictEqual(expected_result, dispatch.dispatch(call))
+        self.assertDictEqual(expected_result2, dispatch.dispatch(call2))
