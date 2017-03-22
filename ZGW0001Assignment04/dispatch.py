@@ -91,7 +91,7 @@ def dispatch(values=None):
         alt_degrees = int(alt)
 
         alt = (alt - alt_degrees) * 60
-        if (str(alt).find('.') > 4):
+        if (int(str(alt).find('.')) > 4):
             alt += 0.1
 
         alt_minutes = str(alt)[0:str(alt).find('.')+2]
