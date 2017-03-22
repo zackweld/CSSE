@@ -87,10 +87,10 @@ class DispatchTest(unittest.TestCase):
         call5 = {'op': 'adjust', 'horizon': 'natural', 'observation': '000.0'}
         call6 = {'op': 'adjust', 'horizon': 'natural', 'observation': '0d00.0'}
         self.assertDictEqual(expected_result, dispatch.dispatch(call))
-        self.assertDictEqual(expected_result, dispatch.dispatch(call2))
-        self.assertDictEqual(expected_result, dispatch.dispatch(call3))
-        self.assertDictEqual(expected_result, dispatch.dispatch(call4))
-        self.assertDictEqual(expected_result, dispatch.dispatch(call5))
-        self.assertDictEqual(expected_result, dispatch.dispatch(call6))
+        self.assertDictEqual(expected_result2, dispatch.dispatch(call2))
+        self.assertDictEqual(expected_result3, dispatch.dispatch(call3))
+        self.assertDictEqual(expected_result4, dispatch.dispatch(call4))
+        self.assertDictEqual(expected_result5, dispatch.dispatch(call5))
+        self.assertDictEqual(expected_result6, dispatch.dispatch(call6))
 
 
