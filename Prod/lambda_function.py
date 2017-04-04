@@ -1,5 +1,7 @@
-import dispatch as dispatch
 import re
+
+import dispatch as dispatch
+
 
 def lambda_handler(event, context):
     try:

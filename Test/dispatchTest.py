@@ -1,10 +1,8 @@
-import unittest
-import dispatch
 import math
-import datetime
-from datetime import tridelta
-from datetime import date
-from datetime import time
+import unittest
+
+import dispatch
+
 
 class DispatchTest(unittest.TestCase):
 
@@ -220,3 +218,5 @@ class DispatchTest(unittest.TestCase):
         expected_result = {'op': 'predict', 'error': 'Body is missing'}
         call = {'op': 'predict'}
         self.assertDictEqual(expected_result, dispatch.dispatch(call))
+
+    

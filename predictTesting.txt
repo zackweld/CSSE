@@ -1,0 +1,51 @@
+Inputs
+
+Body -> Star name
+  Mandatory
+  Must be a name in stars file
+
+Date -> Date of observation
+  Not Mandatory
+    Default to "2001-01-01"
+  Must be in correct format
+    "yyyy-mm-dd"
+  Year must be greater than or equal to 2001
+  Other date info must be valid
+
+Time - Time of observation
+  Not mandatory
+    Defaults to "00:00:00"
+  Must be in correct format
+    "hh:mm:ss"
+
+
+Functionality
+
+1. Find angular displacement relative to Aries
+  - Find star body in table
+  - SHA = SHA from table
+  - latitude = declination from table
+
+2. Calculate the Greenwich Hour Angle for the date and time observed
+  - Determine angular difference for each year
+    Cumulative progression = number of years * -0d14.31667
+  - Take into account leap years
+    rotation = 86164.2s
+    clock = 86400s
+    amount of daily rotation = 0d59.0
+    total progression = number of leap years * amount of daily rotation
+  - Calculate how far the prime meridian has rotated since the beginning of the observation year
+    rotation = GHA(2001-01-01) + cumulative progression + Leap progression
+  - Calculate the angle of the earth's rotation since the beginning of the observation's year
+    Earth rotational period = 86164.1s
+    Amount of rotation = number of total seconds / rotational period * 360d.00
+  - Calculate Total
+    GHA(desired time) = GHA(2001) + rotation in observation year
+
+3. Calculate the star's GHA
+  - Let GHA(star) = GHA(Aries) + SHA(star)
+  - Clean up by getting angle between 0 and 360
+    Round to nearest 0.1 arc minute
+  - Add values to dictionary
+    "long"
+    "lat"
