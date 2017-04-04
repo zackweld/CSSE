@@ -248,7 +248,7 @@ class DispatchTest(unittest.TestCase):
         expected_result3 = {'op': 'predict', 'body': 'Hamal', 'date': '2002-13-23', 'error': 'Invalid date'}
         call4 = {'op': 'predict', 'body': 'Hamal', 'date': '2002-05-33'}
         expected_result4 = {'op': 'predict', 'body': 'Hamal', 'date': '2002-05-33', 'error': 'Invalid date'}
-        self.assertDictEqual(expected_result1, dispatch.dispatch(call))
+        self.assertDictEqual(expected_result1, dispatch.dispatch(call1))
         self.assertDictEqual(expected_result2, dispatch.dispatch(call2))
         self.assertDictEqual(expected_result3, dispatch.dispatch(call3))
         self.assertDictEqual(expected_result4, dispatch.dispatch(call4))
