@@ -113,7 +113,9 @@ def dispatch(values=None):
             date = '2001-01-01'
         else:
             date = values['date']
-            
+            if not(check_date(date)):
+                values['error'] = 'Invalid date'
+
 
         return values    #This calculation is stubbed out
     elif(values['op'] == 'correct'):
@@ -155,3 +157,18 @@ def read_stars_file(star):
             return words
 
     return '-1'
+
+def check_date(date):
+    if not(len(date) == 10):
+        return False
+    if not(date[0:3].isdigit()) or not(date[5:6].isdigit()) or not(date[8:9].isdigit()):
+        return False
+    if not(date[4] == '-') or not(date[7] == '-'):
+        return False
+    year = int(date[0:3])
+    month = int(date[5:6])
+    day = int(date[8:9])
+    if year < 2001 or not(month is date.month) or not(day is date.day(month, year)):
+        return False
+
+    return True
