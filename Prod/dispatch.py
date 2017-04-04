@@ -167,17 +167,19 @@ def minutes_to_degrees(minutes):
     deg = float(minutes[0:minutes.find('d')])
     m = float(minutes[minutes.find('d')+1: len(minutes)])
     m = m / 60
+    deg = deg + m
     if minutes[0] == '-':
-        deg = deg - m
-    else:
-        deg = deg + m
+        deg = deg * (-1)
     return deg
 
 def degrees_to_minutes(degrees):
     deg = int(degrees)
-    degrees = (degrees - deg) * 60
+    degrees = abs(degrees - deg) * 60
     deg_string = str(degrees)
     if (int(deg_string[deg_string.find('.')+2: deg_string.find('.')+3]) > 4):
+        # if deg < 0:
+        #     degrees = degrees - 0.1
+        # else:
         degrees = degrees + 0.1
 
     deg_minutes = str(degrees)[0:str(degrees).find('.')+2]
