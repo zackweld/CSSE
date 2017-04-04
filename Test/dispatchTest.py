@@ -219,4 +219,10 @@ class DispatchTest(unittest.TestCase):
         call = {'op': 'predict'}
         self.assertDictEqual(expected_result, dispatch.dispatch(call))
 
-    
+    def test400_020_CheckReadFile(self):
+        current_star_info = dispatch.read_stars_file('Hamal')
+        self.assertEquals(current_star_info[0], 'Hamal')
+        self.assertEquals(current_star_info[1], '327d58.7')
+        self.assertEquals(current_star_info[2], '23d32.3')
+        invalid_star = dispatch.read_stars_file('Name')
+        self.assertEquals('-1', invalid_star)
