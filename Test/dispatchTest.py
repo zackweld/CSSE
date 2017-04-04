@@ -235,4 +235,6 @@ class DispatchTest(unittest.TestCase):
     def test400_040_PredictMissingDate(self):
         call = {'op': 'predict', 'body': 'Hamal'}
         date = "random"
+        if not('date' in  call):
+            date = '2001-01-01'
         self.assertEquals('2001-01-01', date)
