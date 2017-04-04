@@ -162,9 +162,10 @@ def convert_to_celsius(temp):
     return cels
 
 def minutes_to_degrees(minutes):
-    deg = minutes[0:minutes.find('d')]
-    minutes = float(minutes) - int(minutes)
-    deg = float(deg) + (minutes * 60)
+    deg = float(minutes[0:minutes.find('d')])
+    m = float(minutes[minutes.find('d')+1], len(minutes))
+    m = m / 60
+    deg = deg + m    
     return deg
 
 def degrees_to_minutes(degrees):
