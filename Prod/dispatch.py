@@ -190,7 +190,7 @@ def check_time(time):
     hour = int(time[0:1])
     minutes = int(time[3:4])
     seconds = int(time[6:7])
-    if not(hour is time.hour) or not(minutes is time.minutes) or not(seconds is time.seconds):
+    if not(hour is time.hour) or not(minutes is time.minute) or not(seconds is time.second):
         return False
 
     return True
