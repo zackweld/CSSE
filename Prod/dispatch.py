@@ -120,8 +120,8 @@ def dispatch(values=None):
             time = '00:00:00'
         else:
             time = values['time']
-            # if not(check_time(time)):
-            #     values['error'] = 'Invalid time'
+            if not(check_time(time)):
+                values['error'] = 'Invalid time'
 
 
         return values    #This calculation is stubbed out
