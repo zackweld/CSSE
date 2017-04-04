@@ -165,31 +165,31 @@ def read_stars_file(star):
 
     return '-1'
 
-def check_date(date):
-    if not(len(date) == 10):
+def check_date(d):
+    if not(len(d) == 10):
         return False
-    if not(date[0:3].isdigit()) or not(date[5:6].isdigit()) or not(date[8:9].isdigit()):
+    if not(d[0:3].isdigit()) or not(d[5:6].isdigit()) or not(d[8:9].isdigit()):
         return False
-    if not(date[4] == '-') or not(date[7] == '-'):
+    if not(d[4] == '-') or not(d[7] == '-'):
         return False
-    year = int(date[0:3])
-    month = int(date[5:6])
-    day = int(date[8:9])
+    year = int(d[0:3])
+    month = int(d[5:6])
+    day = int(d[8:9])
     if year < 2001 or not(month is date.month) or not(day is date.day(month, year)):
         return False
 
     return True
 
-def check_time(time):
-    if not(len(time) == 8):
+def check_time(t):
+    if not(len(t) == 8):
         return False
-    if not(time[0:1].isdigit()) or not(time[3:4].isdigit()) or not(time[6:7].isdigit()):
+    if not(t[0:1].isdigit()) or not(t[3:4].isdigit()) or not(t[6:7].isdigit()):
         return False
-    if not(time[2] == ':') or not(time[5] == ':'):
+    if not(t[2] == ':') or not(t[5] == ':'):
         return False
-    hour = int(time[0:1])
-    minutes = int(time[3:4])
-    seconds = int(time[6:7])
+    hour = int(t[0:1])
+    minutes = int(t[3:4])
+    seconds = int(t[6:7])
     if not(hour is time.hour) or not(minutes is time.minute) or not(seconds is time.second):
         return False
 
