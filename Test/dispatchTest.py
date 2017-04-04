@@ -238,3 +238,17 @@ class DispatchTest(unittest.TestCase):
         if not('date' in  call):
             date = '2001-01-01'
         self.assertEquals('2001-01-01', date)
+
+    def test400_050_PredictInvalidDate(self):
+        call1 = {'op': 'predict', 'body': 'Hamal', 'date': '20030-0302-1'}
+        expected_result1 = {'op': 'predict', 'body': 'Hamal', 'date': '20030-0302-1', 'error': 'Invalid date'}
+        call2 = {'op': 'predict', 'body': 'Hamal', 'date': '2000-05-23'}
+        expected_result2 = {'op': 'predict', 'body': 'Hamal', 'date': '2000-05-23', 'error': 'Invalid date'}
+        call3 = {'op': 'predict', 'body': 'Hamal', 'date': '2002-13-23'}
+        expected_result3 = {'op': 'predict', 'body': 'Hamal', 'date': '2002-13-23', 'error': 'Invalid date'}
+        call4 = {'op': 'predict', 'body': 'Hamal', 'date': '2002-05-33'}
+        expected_result4 = {'op': 'predict', 'body': 'Hamal', 'date': '2002-05-33', 'error': 'Invalid date'}
+        self.assertDictEqual(expected_result1, dispatch.dispatch(call))
+        self.assertDictEqual(expected_result2, dispatch.dispatch(call2))
+        self.assertDictEqual(expected_result3, dispatch.dispatch(call3))
+        self.assertDictEqual(expected_result4, dispatch.dispatch(call4))
