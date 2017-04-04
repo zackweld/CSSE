@@ -252,3 +252,8 @@ class DispatchTest(unittest.TestCase):
         self.assertDictEqual(expected_result2, dispatch.dispatch(call2))
         self.assertDictEqual(expected_result3, dispatch.dispatch(call3))
         self.assertDictEqual(expected_result4, dispatch.dispatch(call4))
+
+    def test400_060_PredictMissingTime(self):
+        call = {'op': 'predict', 'body': 'Hamal'}
+        time = 'random'
+        self.assertEquals('00:00:00', time)
