@@ -226,3 +226,8 @@ class DispatchTest(unittest.TestCase):
         self.assertEquals(current_star_info[2], '23d32.3')
         invalid_star = dispatch.read_stars_file('Name')
         self.assertEquals('-1', invalid_star)
+
+    def test400_030_PredictBodyNotValid(self):
+        expected_result = {'op': 'predict', 'body': 'unknown', 'error': 'Star not in catalog'}
+        call = {'op': 'predict', 'body': 'unknown'}
+        self.assertDictEqual(expected_result, dispatch.dispatch(call))
