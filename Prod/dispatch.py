@@ -123,6 +123,28 @@ def dispatch(values=None):
             if not(check_time(time)):
                 values['error'] = 'Invalid time'
 
+        # Establish year, month, date, hour, minute, second
+        year = date[0:3]
+        month = date[5:6]
+        day = date[8:9]
+        hour = time[0:1]
+        minute = time[3:4]
+        second = time[6:7]
+
+        # Determine angular difference for each year
+        angularDifference = (year - 2001) * minutes_to_degrees('-0d14.31667')
+
+        # Take into account leap years
+        # numberOfLeapYears = 0
+        # for i in range(2001, year):
+        #     if (i % 4) == 0:
+        #         numberOfLeapYears++
+        #
+        # totalProgression = numberOfLeapYears * minutes_to_degrees('0d59.0')
+
+
+
+
 
         return values    #This calculation is stubbed out
     elif(values['op'] == 'correct'):
@@ -140,9 +162,9 @@ def convert_to_celsius(temp):
     return cels
 
 def minutes_to_degrees(minutes):
-    deg = str(minutes)[0:str(minutes).find('d')]
-    minutes = minutes - int(minutes)
-    deg = deg + (minutes * 60)
+    deg = minutes[0:minutes.find('d')]
+    minutes = float(minutes) - int(minutes)
+    deg = float(deg) + (minutes * 60)
     return deg
 
 def degrees_to_minutes(degrees):
