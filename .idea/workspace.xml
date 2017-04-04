@@ -15,6 +15,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/ZGW0001Assignment04/dispatchTest.py" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/ZGW0001Assignment04/lambda_function.zip" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/ZGW0001Assignment04/starts.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Test/dispatchTest.py" afterPath="$PROJECT_DIR$/Test/dispatchTest.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -593,9 +594,6 @@
     <option name="remove_strategy" value="false" />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_Tests_(TDD) - 2017.04.04 at 11h 13m 18s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
     <history-entry file="All_Tests_(TDD) - 2017.04.04 at 11h 31m 00s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
@@ -621,6 +619,9 @@
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
     <history-entry file="All_Tests_(TDD) - 2017.04.04 at 11h 49m 57s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.04.04 at 11h 50m 20s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
   </component>

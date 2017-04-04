@@ -259,3 +259,17 @@ class DispatchTest(unittest.TestCase):
         if not(time in call):
             time = '00:00:00'
         self.assertEquals('00:00:00', time)
+
+    def test400_070_PredictInvalidTime(self):
+        call1 = {'op': 'predict', 'body': 'Hamal', 'time': '0h0e030:'}
+        expected_result1 = {'op': 'predict', 'body': 'Hamal', 'time': '0h0e030:', 'error': 'Invalid time'}
+        call2 = {'op': 'predict', 'body': 'Hamal', 'time': '25:30:30'}
+        expected_result2 = {'op': 'predict', 'body': 'Hamal', 'time': '25:30:30', 'error': 'Invalid time'}
+        call3 = {'op': 'predict', 'body': 'Hamal', 'time': '02:50:30'}
+        expected_result3 = {'op': 'predict', 'body': 'Hamal', 'time': '02:50:30', 'error', 'Invalid time'}
+        call4 = {'op': 'predict', 'body': 'Hamal', 'time': '02:40:50'}
+        expected_result4 = {'op': 'predict', 'body': 'Hamal', 'time': '02:40:50', 'error': 'Invalid time'}
+        self.assertDictEqual(expected_result1, dispatch.dispatch(call1))
+        self.assertDictEqual(expected_result2, dispatch.dispatch(call2))
+        self.assertDictEqual(expected_result3, dispatch.dispatch(call3))
+        self.assertDictEqual(expected_result4, dispatch.dispatch(call4))

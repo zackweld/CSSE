@@ -116,6 +116,13 @@ def dispatch(values=None):
             if not(check_date(date)):
                 values['error'] = 'Invalid date'
 
+        if not('time' in values):
+            time = '00:00:00'
+        else:
+            time = values['time']
+            # if not(check_time(time)):
+            #     values['error'] = 'Invalid time'
+
 
         return values    #This calculation is stubbed out
     elif(values['op'] == 'correct'):
@@ -169,6 +176,21 @@ def check_date(date):
     month = int(date[5:6])
     day = int(date[8:9])
     if year < 2001 or not(month is date.month) or not(day is date.day(month, year)):
+        return False
+
+    return True
+
+def check_time(time):
+    if not(len(time) == 8):
+        return False
+    if not(time[0:1].isdigit()) or not(time[3:4].isdigit()) or not(time[6:7].isdigit()):
+        return False
+    if not(time[2] == ':') or not(time[5] == ':'):
+        return False
+    hour = time[0:1]
+    minutes = time[3:4]
+    seconds = time[6:7]
+    if not(hour is time.hour) or not(minutes is time.minutes) or not(seconds is time.seconds):
         return False
 
     return True
