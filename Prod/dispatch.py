@@ -103,6 +103,11 @@ def dispatch(values=None):
         if (not('body' in values)):
             values['error'] = 'Body is missing'
             return values
+        desired_star = read_stars_file(values['body'])
+        if (desired_star == -1):
+            values['error'] = 'Star not in catalog'
+            return values
+
 
         return values    #This calculation is stubbed out
     elif(values['op'] == 'correct'):
