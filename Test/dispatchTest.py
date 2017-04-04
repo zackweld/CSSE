@@ -277,4 +277,4 @@ class DispatchTest(unittest.TestCase):
     def test400_080_PredictAngularDifference(self):
         year = 2016
         angularDifference = '0.0'
-        self.assertAlmostEqual(angularDifference, '-3d34.8')
+        self.assertEquals(angularDifference, '-3d34.8')
