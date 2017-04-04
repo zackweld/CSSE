@@ -187,9 +187,9 @@ def check_time(time):
         return False
     if not(time[2] == ':') or not(time[5] == ':'):
         return False
-    hour = time[0:1]
-    minutes = time[3:4]
-    seconds = time[6:7]
+    hour = int(time[0:1])
+    minutes = int(time[3:4])
+    seconds = int(time[6:7])
     if not(hour is time.hour) or not(minutes is time.minutes) or not(seconds is time.seconds):
         return False
 
