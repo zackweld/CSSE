@@ -109,9 +109,9 @@ def dispatch(values=None):
 
         return values    #<-------------- replace this with your implementation
     elif(values['op'] == 'predict'):
-        if (not('body' in values)):
-            values['error'] = 'Body is missing'
-            return values
+        # if (not('body' in values)):
+            # values['error'] = 'Body is missing'
+            # return values
 
         return values    #This calculation is stubbed out
     elif(values['op'] == 'correct'):
