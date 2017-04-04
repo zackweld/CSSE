@@ -256,4 +256,6 @@ class DispatchTest(unittest.TestCase):
     def test400_060_PredictMissingTime(self):
         call = {'op': 'predict', 'body': 'Hamal'}
         time = 'random'
+        if not(time in call):
+            time = '00:00:00'
         self.assertEquals('00:00:00', time)
