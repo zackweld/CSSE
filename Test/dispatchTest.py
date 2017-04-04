@@ -231,3 +231,8 @@ class DispatchTest(unittest.TestCase):
         expected_result = {'op': 'predict', 'body': 'unknown', 'error': 'Star not in catalog'}
         call = {'op': 'predict', 'body': 'unknown'}
         self.assertDictEqual(expected_result, dispatch.dispatch(call))
+
+    def test400_040_PredictMissingDate(self):
+        call = {'op': 'predict', 'body': 'Hamal'}
+        date = "random"
+        self.assertEquals('2001-01-01', date)
