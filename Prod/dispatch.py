@@ -115,6 +115,7 @@ def dispatch(values=None):
             date = values['date']
             if not(check_date(date)):
                 values['error'] = 'Invalid date'
+                return values
 
         if not('time' in values):
             time = '00:00:00'
@@ -122,14 +123,15 @@ def dispatch(values=None):
             time = values['time']
             if not(check_time(time)):
                 values['error'] = 'Invalid time'
+                return values
 
         # Establish year, month, date, hour, minute, second
-        year = date[0:3]
-        month = date[5:6]
-        day = date[8:9]
-        hour = time[0:1]
-        minute = time[3:4]
-        second = time[6:7]
+        year = int(date[0:3])
+        month = int(date[5:6])
+        day = int(date[8:9])
+        hour = int(time[0:1])
+        minute = int(time[3:4])
+        second = int(time[6:7])
 
         # Determine angular difference for each year
         angularDifference = (year - 2001) * minutes_to_degrees('-0d14.31667')
@@ -165,7 +167,7 @@ def minutes_to_degrees(minutes):
     deg = float(minutes[0:minutes.find('d')])
     m = float(minutes[minutes.find('d')+1], len(minutes))
     m = m / 60
-    deg = deg + m    
+    deg = deg + m
     return deg
 
 def degrees_to_minutes(degrees):
