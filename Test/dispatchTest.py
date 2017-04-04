@@ -276,6 +276,6 @@ class DispatchTest(unittest.TestCase):
 
     def test400_080_PredictAngularDifference(self):
         year = 2016
-        angularDifference = (2016 - 2001) * minutes_to_degrees('-0d14.31667')
-        angularDifference = degrees_to_minutes(angularDifference)
+        angularDifference = (2016 - 2001) * dispatch.minutes_to_degrees('-0d14.31667')
+        angularDifference = dispatch.degrees_to_minutes(angularDifference)
         self.assertEquals(angularDifference, '-3d34.8')
