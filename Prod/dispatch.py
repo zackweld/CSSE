@@ -100,6 +100,14 @@ def dispatch(values=None):
 
         return values    #<-------------- replace this with your implementation
     elif(values['op'] == 'predict'):
+        if 'lat' in values:
+            values['error'] = 'Latitdue input not allowed'
+            return values
+
+        if 'long' in values:
+            values['error'] = 'Longitude input not allowed'
+            return values
+
         if (not('body' in values)):
             values['error'] = 'Body is missing'
             return values
