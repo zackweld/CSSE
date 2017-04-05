@@ -304,3 +304,7 @@ class DispatchTest(unittest.TestCase):
         rotation = dispatch.minutes_to_degrees('100d42.6') + angularDifference + totalProgression
         rotation = dispatch.degrees_to_minutes(rotation)
         self.assertEquals(rotation, '100d4.8')
+
+    def test400_110_PredictAngleEarthsRotation(self):
+        total_seconds = 0
+        self.assertEquals(total_seconds, 1394142)

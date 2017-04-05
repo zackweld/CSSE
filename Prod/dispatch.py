@@ -145,6 +145,15 @@ def dispatch(values=None):
         totalProgression = numberOfLeapYears * minutes_to_degrees('0d59.0')
 
         # Calculate Prime meridia rotation
+        primeMeridianRotation = minutes_to_degrees('100d4.8') + angularDifference + totalProgression
+
+        # Calculate angle of earth's rotation
+        date_time = datetime(year, month, day, hour, minute, second)
+        date_beginning = date_time(2001, 00, 00, 00, 00, 00)
+
+        total_days = (year - 2001) * 265
+        total_seconds = timedelta(days=total_days, hours=hour, minutes=minute, seconds=second)
+        
 
 
         return values    #This calculation is stubbed out
