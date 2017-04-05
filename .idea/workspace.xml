@@ -593,9 +593,6 @@
     <option name="remove_strategy" value="false" />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_Tests_(TDD) - 2017.04.04 at 19h 19m 23s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
     <history-entry file="All_Tests_(TDD) - 2017.04.04 at 19h 22m 31s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
@@ -621,6 +618,9 @@
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
     <history-entry file="All_Tests_(TDD) - 2017.04.04 at 19h 40m 43s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.04.04 at 19h 40m 51s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
   </component>

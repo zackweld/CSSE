@@ -140,11 +140,12 @@ def dispatch(values=None):
         numberOfLeapYears = 0
         for i in range(2001, year):
             if (i % 4) == 0:
-                numberOfLeapYears++
+                numberOfLeapYears += 1
 
         totalProgression = numberOfLeapYears * minutes_to_degrees('0d59.0')
 
-        
+        # Calculate Prime meridia rotation
+
 
         return values    #This calculation is stubbed out
     elif(values['op'] == 'correct'):
