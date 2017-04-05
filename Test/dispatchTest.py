@@ -316,5 +316,6 @@ class DispatchTest(unittest.TestCase):
     def test400_120_PredictTotalGHAAries(self):
         primeMeridianRotation = '100d4.8'
         angleRotation = '64d49.7'
-        ariesTotal = 0
+        ariesTotal = dispatch.minutes_to_degrees(primeMeridianRotation) + dispatch.minutes_to_degrees(angleRotation)
+        ariesTotal = dispatch.degrees_to_minutes(ariesTotal)
         self.assertEquals(ariesTotal, '164d54.5')
