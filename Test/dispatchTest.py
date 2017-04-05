@@ -285,7 +285,7 @@ class DispatchTest(unittest.TestCase):
         numberOfLeapYears = 0
         for i in range(2001, year):
             if (i % 4) == 0:
-                numberOfLeapYears++
+                numberOfLeapYears += 1
 
         totalProgression = numberOfLeapYears * minutes_to_degrees('0d59.0')
         totalProgression = degrees_to_minutes(totalProgression)
