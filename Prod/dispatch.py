@@ -104,6 +104,8 @@ def dispatch(values=None):
             values['error'] = 'Body is missing'
             return values
         desired_star = read_stars_file(values['body'])
+        star_SHA = desired_star[1]
+        star_declination = desired_star[2]
 
         if (desired_star == '-1'):
             values['error'] = 'Star not in catalog'

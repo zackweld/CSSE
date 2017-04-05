@@ -319,3 +319,8 @@ class DispatchTest(unittest.TestCase):
         ariesTotal = dispatch.minutes_to_degrees(primeMeridianRotation) + dispatch.minutes_to_degrees(angleRotation)
         ariesTotal = dispatch.degrees_to_minutes(ariesTotal)
         self.assertEquals(ariesTotal, '164d54.5')
+
+    def test400_130_PredictGHAStar(self):
+        call = {'op': 'predict', 'body': 'Betelgeuse', 'date': '2016:01:17', 'time': '03:15:42'}
+        expected_result = {'op': 'predict', 'body': 'Betelgeuse', 'date': '2016:01:17', 'time': '03:15:42', 'lat': '7d24.3', 'long', '75d53.6'}
+        self.assertDictEqual(expected_result, dispatch.dispatch(call))
