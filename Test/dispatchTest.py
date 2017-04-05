@@ -282,5 +282,11 @@ class DispatchTest(unittest.TestCase):
 
     def test400_090_PredictAccountForLeapYears(self):
         year = 2016
-        totalProgression = 0.0
+        numberOfLeapYears = 0
+        for i in range(2001, year):
+            if (i % 4) == 0:
+                numberOfLeapYears++
+
+        totalProgression = numberOfLeapYears * minutes_to_degrees('0d59.0')
+        totalProgression = degrees_to_minutes(totalProgression)
         self.assertEquals(totalProgression, '2d56.9')
