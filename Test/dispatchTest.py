@@ -279,3 +279,8 @@ class DispatchTest(unittest.TestCase):
         angularDifference = (2016 - 2001) * dispatch.minutes_to_degrees('-0d14.31667')
         angularDifference = dispatch.degrees_to_minutes(angularDifference)
         self.assertEquals(angularDifference, '-3d34.8')
+
+    def test400_090_PredictAccountForLeapYears(self):
+        year = 2016
+        totalProgression = 0.0
+        self.assertEquals(totalProgression, '2d56.9')
