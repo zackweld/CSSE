@@ -312,3 +312,9 @@ class DispatchTest(unittest.TestCase):
         rotation = total_seconds / 86164.1 * dispatch.minutes_to_degrees('360d00.0')
         rotation = dispatch.degrees_to_minutes(rotation)
         self.assertEquals(rotation, '64d49.7')
+
+    def test400_120_PredictTotalGHAAries(self):
+        primeMeridianRotation = '100d4.8'
+        angleRotation = '64d49.7'
+        ariesTotal = 0
+        self.assertEquals(ariesTotal, '164d54.5')

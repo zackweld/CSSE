@@ -144,12 +144,14 @@ def dispatch(values=None):
 
         totalProgression = numberOfLeapYears * minutes_to_degrees('0d59.0')
 
-        # Calculate Prime meridia rotation
+        # Calculate Prime meridian rotation
         primeMeridianRotation = minutes_to_degrees('100d4.8') + angularDifference + totalProgression
 
         # Calculate angle of earth's rotation
         total_seconds = int(timedelta(days=day, hours=hour, minutes=minute, seconds=second).total_seconds())
+        rotation = total_seconds / 86164.1 * 360
 
+        # Calculate Aries total
 
 
 
