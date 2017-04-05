@@ -1,7 +1,8 @@
 import math
 import unittest
-
 import dispatch
+import datetime
+from datetime import timedelta, date, time
 
 
 class DispatchTest(unittest.TestCase):
@@ -306,5 +307,6 @@ class DispatchTest(unittest.TestCase):
         self.assertEquals(rotation, '100d4.8')
 
     def test400_110_PredictAngleEarthsRotation(self):
-        total_seconds = 0
+        total_days = 15 * 365
+        total_seconds = int(timedelta(days=16, hours=03, minutes=15, seconds=42).total_seconds())
         self.assertEquals(total_seconds, 1394142)

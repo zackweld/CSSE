@@ -151,9 +151,9 @@ def dispatch(values=None):
         date_time = datetime(year, month, day, hour, minute, second)
         date_beginning = date_time(2001, 00, 00, 00, 00, 00)
 
-        total_days = (year - 2001) * 265
+        total_days = (year - 2001) * 365
         total_seconds = timedelta(days=total_days, hours=hour, minutes=minute, seconds=second)
-        
+
 
 
         return values    #This calculation is stubbed out
