@@ -126,12 +126,12 @@ def dispatch(values=None):
                 return values
 
         # Establish year, month, date, hour, minute, second
-        year = int(date[0:3])
-        month = int(date[5:6])
-        day = int(date[8:9])
-        hour = int(time[0:1])
-        minute = int(time[3:4])
-        second = int(time[6:7])
+        year = int(date[0:4])
+        month = int(date[5:7])
+        day = int(date[8:10])
+        hour = int(time[0:2])
+        minute = int(time[3:5])
+        second = int(time[6:8])
         star_SHA = desired_star[1]
         star_declination = desired_star[2]
 
@@ -145,14 +145,33 @@ def dispatch(values=None):
                 numberOfLeapYears += 1
 
         totalProgression = numberOfLeapYears * minutes_to_degrees('0d59.0')
+        totalProgression = degrees_to_minutes(totalProgression)
 
         # Calculate Prime meridian rotation
-        primeMeridianRotation = minutes_to_degrees('100d4.8') + angularDifference + totalProgression
+        primeMeridianRotation = minutes_to_degrees('100d42.6') + angularDifference + minutes_to_degrees(totalProgression)
         primeMeridianRotation = degrees_to_minutes(primeMeridianRotation)
+
+
         # Calculate angle of earth's rotation
-        total_seconds = int(timedelta(days=day, hours=hour, minutes=minute, seconds=second).total_seconds())
+        total_days = day-1
+        i = 1
+        while i < month:
+            if month == 01 or month == 03 or month == 05 or month == 07 or month == 8 or month == 10 or month == 12:
+                total_days += 31
+            elif month == 02:
+                if (year % 4) == 0:
+                    total_days += 29
+                else:
+                    total_days += 28
+            else:
+                total_days += 30
+            i += 1
+
+
+        total_seconds = int(timedelta(days=total_days, hours=hour, minutes=minute, seconds=second).total_seconds())
         rotation = total_seconds / 86164.1 * 360
         rotation = degrees_to_minutes(rotation)
+
         # Calculate Aries total
         ariesTotal = minutes_to_degrees(primeMeridianRotation) + minutes_to_degrees(rotation)
         ariesTotal = degrees_to_minutes(ariesTotal)
