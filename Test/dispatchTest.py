@@ -324,3 +324,11 @@ class DispatchTest(unittest.TestCase):
         call = {'op': 'predict', 'body': 'betelgeuse', 'date': '2016-01-17', 'time': '03:15:42'}
         expected_result = {'op': 'predict', 'body': 'betelgeuse', 'date': '2016-01-17', 'time': '03:15:42', 'lat': '7d24.3', 'long': '75d53.6'}
         self.assertDictEqual(expected_result, dispatch.dispatch(call))
+
+    def test400_140_PredictLatLongInput(self):
+        call = {'op': 'predict', 'body': 'hamal', 'lat': '12d45.4'}
+        call2 = {'op': 'predict', 'body': 'hamal', 'long': '12d45.4'}
+        expected_result = {'op': 'predict', 'body': 'hamal', 'lat': '12d45.4', 'error': 'Latitude input not allowed'}
+        expected_result2 = {'op': 'predict', 'body': 'hamal', 'long': '12d45.4', 'error': 'Longitude input not allowed'}
+        self.assertDictEqual(expected_result, dispatch.dispatch(call))
+        self.assertDictEqual(expected_result2, dispatch.dispatch(call2))
