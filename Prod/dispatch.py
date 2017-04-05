@@ -104,8 +104,6 @@ def dispatch(values=None):
             values['error'] = 'Body is missing'
             return values
         desired_star = read_stars_file(values['body'])
-        star_SHA = desired_star[1]
-        star_declination = desired_star[2]
 
         if (desired_star == '-1'):
             values['error'] = 'Star not in catalog'
@@ -134,6 +132,8 @@ def dispatch(values=None):
         hour = int(time[0:1])
         minute = int(time[3:4])
         second = int(time[6:7])
+        star_SHA = desired_star[1]
+        star_declination = desired_star[2]
 
         # Determine angular difference for each year
         angularDifference = (year - 2001) * minutes_to_degrees('-0d14.31667')
