@@ -293,5 +293,14 @@ class DispatchTest(unittest.TestCase):
 
     def test400_100_PredictPrimeMeridianRotation(self):
         year = 2016
-        rotation = 0.0
+        angularDifference = (2016 - 2001) * dispatch.minutes_to_degrees('-0d14.31667')
+        numberOfLeapYears = 0
+        for i in range(2001, year):
+            if (i % 4) == 0:
+                numberOfLeapYears += 1
+
+        totalProgression = numberOfLeapYears * dispatch.minutes_to_degrees('0d59.0')
+
+        rotation = dispatch.minutes_to_degrees('100d42.6') + angularDifference + totalProgression
+        rotation = dispatch.degrees_to_minutes(rotation)
         self.assertEquals(rotation, '100d4.8')
