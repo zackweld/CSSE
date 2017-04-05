@@ -214,8 +214,24 @@ def check_date(d):
     year = int(d[0:3])
     month = int(d[5:6])
     day = int(d[8:9])
-    if year < 2001 or not(month is date.month) or not(day is date.day(month, year)):
+
+    if year < 2001 or month < 1 or month > 12:
         return False
+
+    # if month == 01 or month == 03 or month == 05 or month == 07 or month == 8 or month == 10 or month == 12:
+    #     if day > 31:
+    #         return False
+    # elif month == 02:
+    #     if (year % 4) == 0:
+    #         if day > 29:
+    #             return False
+    #     else:
+    #         if day > 28:
+    #             return False
+    # else:
+    #     if day > 30:
+    #         return False
+
 
     return True
 
@@ -229,6 +245,7 @@ def check_time(t):
     hour = int(t[0:1])
     minutes = int(t[3:4])
     seconds = int(t[6:7])
+
     if not(hour is time.hour) or not(minutes is time.minute) or not(seconds is time.second):
         return False
 
