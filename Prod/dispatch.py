@@ -207,30 +207,30 @@ def read_stars_file(star):
 def check_date(d):
     if not(len(d) == 10):
         return False
-    if not(d[0:3].isdigit()) or not(d[5:6].isdigit()) or not(d[8:9].isdigit()):
+    if not(d[0:4].isdigit()) or not(d[5:7].isdigit()) or not(d[8:10].isdigit()):
         return False
-    if not(d[4] == '-') or not(d[7] == '-'):
+    if not(d[4:5] == '-') or not(d[7:8] == '-'):
         return False
-    year = int(d[0:3])
-    month = int(d[5:6])
-    day = int(d[8:9])
+    year = int(d[0:4])
+    month = int(d[5:7])
+    day = int(d[8:10])
 
     if year < 2001 or month < 1 or month > 12:
         return False
 
-    # if month == 01 or month == 03 or month == 05 or month == 07 or month == 8 or month == 10 or month == 12:
-    #     if day > 31:
-    #         return False
-    # elif month == 02:
-    #     if (year % 4) == 0:
-    #         if day > 29:
-    #             return False
-    #     else:
-    #         if day > 28:
-    #             return False
-    # else:
-    #     if day > 30:
-    #         return False
+    if month == 01 or month == 03 or month == 05 or month == 07 or month == 8 or month == 10 or month == 12:
+        if day > 31:
+            return False
+    elif month == 02:
+        if (year % 4) == 0:
+            if day > 29:
+                return False
+        else:
+            if day > 28:
+                return False
+    else:
+        if day > 30:
+            return False
 
 
     return True
@@ -238,15 +238,16 @@ def check_date(d):
 def check_time(t):
     if not(len(t) == 8):
         return False
-    if not(t[0:1].isdigit()) or not(t[3:4].isdigit()) or not(t[6:7].isdigit()):
+    if not(t[0:2].isdigit()) or not(t[3:5].isdigit()) or not(t[6:8].isdigit()):
         return False
-    if not(t[2] == ':') or not(t[5] == ':'):
+    if not(t[2:3] == ':') or not(t[5:6] == ':'):
         return False
-    hour = int(t[0:1])
-    minutes = int(t[3:4])
-    seconds = int(t[6:7])
+    hour = int(t[0:2])
+    minutes = int(t[3:5])
+    seconds = int(t[6:8])
 
-    if not(hour is time.hour) or not(minutes is time.minute) or not(seconds is time.second):
+    if hour < 0 or hour > 23 or minutes < 0 or minutes > 59 or seconds < 0 or seconds > 59:
         return False
+
 
     return True
