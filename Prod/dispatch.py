@@ -148,13 +148,21 @@ def dispatch(values=None):
 
         # Calculate Prime meridian rotation
         primeMeridianRotation = minutes_to_degrees('100d4.8') + angularDifference + totalProgression
-
+        primeMeridianRotation = degrees_to_minutes(primeMeridianRotation)
         # Calculate angle of earth's rotation
         total_seconds = int(timedelta(days=day, hours=hour, minutes=minute, seconds=second).total_seconds())
         rotation = total_seconds / 86164.1 * 360
-
+        rotation = degrees_to_minutes(rotation)
         # Calculate Aries total
+        ariesTotal = minutes_to_degrees(primeMeridianRotation) + minutes_to_degrees(rotation)
+        ariesTotal = degrees_to_minutes(ariesTotal)
 
+        # Calculate GHA star
+        gha_star = minutes_to_degrees(ariesTotal) + minutes_to_degrees(star_SHA)
+        gha_star = degrees_to_minutes(gha_star)
+
+        values['long'] = gha_star
+        values['lat'] = star_declination
 
 
         return values    #This calculation is stubbed out
