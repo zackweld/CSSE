@@ -226,7 +226,7 @@ def read_stars_file(star):
     stars = open('stars', 'r')
     for line in stars:
         words = line.split()
-        if (words[0] == star):
+        if (words[0].lower() == star.lower()):
             return words
 
     return '-1'
