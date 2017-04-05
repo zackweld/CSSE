@@ -176,8 +176,9 @@ def degrees_to_minutes(degrees):
     deg = int(degrees)
     degrees = abs(degrees - deg) * 60
     deg_string = str(degrees)
-    if (int(deg_string[deg_string.find('.')+2: deg_string.find('.')+3]) > 4):
-        degrees = degrees + 0.1
+    if not(deg_string[deg_string.find('.')+2: deg_string.find('.')+3] == ''):
+        if (int(deg_string[deg_string.find('.')+2: deg_string.find('.')+3]) > 4):
+            degrees = degrees + 0.1
 
     deg_minutes = str(degrees)[0:str(degrees).find('.')+2]
     altitude = str(deg) + 'd' + deg_minutes

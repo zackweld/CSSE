@@ -289,4 +289,4 @@ class DispatchTest(unittest.TestCase):
 
         totalProgression = numberOfLeapYears * dispatch.minutes_to_degrees('0d59.0')
         totalProgression = dispatch.degrees_to_minutes(totalProgression)
-        self.assertEquals(totalProgression, '2d56.9')
+        self.assertEquals(totalProgression, '2d57.0')
