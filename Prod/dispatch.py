@@ -137,16 +137,14 @@ def dispatch(values=None):
         angularDifference = (year - 2001) * minutes_to_degrees('-0d14.31667')
 
         # Take into account leap years
-        # numberOfLeapYears = 0
-        # for i in range(2001, year):
-        #     if (i % 4) == 0:
-        #         numberOfLeapYears++
-        #
-        # totalProgression = numberOfLeapYears * minutes_to_degrees('0d59.0')
+        numberOfLeapYears = 0
+        for i in range(2001, year):
+            if (i % 4) == 0:
+                numberOfLeapYears++
 
+        totalProgression = numberOfLeapYears * minutes_to_degrees('0d59.0')
 
-
-
+        
 
         return values    #This calculation is stubbed out
     elif(values['op'] == 'correct'):
