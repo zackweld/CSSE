@@ -148,11 +148,7 @@ def dispatch(values=None):
         primeMeridianRotation = minutes_to_degrees('100d4.8') + angularDifference + totalProgression
 
         # Calculate angle of earth's rotation
-        date_time = datetime(year, month, day, hour, minute, second)
-        date_beginning = date_time(2001, 00, 00, 00, 00, 00)
-
-        total_days = ((year - 2001) * 365) + day
-        total_seconds = int(timedelta(days=total_days, hours=hour, minutes=minute, seconds=second).total_seconds())
+        total_seconds = int(timedelta(days=day, hours=hour, minutes=minute, seconds=second).total_seconds())
 
 
 
@@ -190,6 +186,8 @@ def degrees_to_minutes(degrees):
             degrees = degrees + 0.1
 
     deg_minutes = str(degrees)[0:str(degrees).find('.')+2]
+    while deg > 360:
+        deg = deg - 360
     altitude = str(deg) + 'd' + deg_minutes
     return altitude
 
