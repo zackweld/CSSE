@@ -307,6 +307,9 @@ class DispatchTest(unittest.TestCase):
         self.assertEquals(rotation, '100d4.8')
 
     def test400_110_PredictAngleEarthsRotation(self):
-        total_days = 15 * 365
         total_seconds = int(timedelta(days=16, hours=03, minutes=15, seconds=42).total_seconds())
         self.assertEquals(total_seconds, 1394142)
+        # rotation = total_seconds / 86164.1 * 360
+        # rotation = degrees_to_minutes(rotation)
+        rotation = 0
+        self.assertEquals(rotation, '164d54.5')
