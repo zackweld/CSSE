@@ -384,4 +384,17 @@ class DispatchTest(unittest.TestCase):
         self.assertDictEqual(expected_result4, dispatch.dispatch(call4))
 
     def test500_040_CorrectInvalidAssumedLong(self):
-        call = {"op": "correct", "lat": "30d30.0", "long": "30d30.0", "altitude": "30d30.0", "assumedLat": "30d30.0", "assumedLong": "30d30"}
+        call = {"op": "correct", "lat": "30d30.0", "long": "30d30.0", "altitude": "30d30.0", "assumedLat": "30d30.0", "assumedLong": "-05d30.0"}
+        call2 = {"op": "correct", "lat": "30d30.0", "long": "30d30.0", "altitude": "30d30.0", "assumedLat": "30d30.0", "assumedLong": "361d30.0"}
+        call3 = {"op": "correct", "lat": "30d30.0", "long": "30d30.0", "altitude": "30d30.0", "assumedLat": "30d30.0", "assumedLong": "30d-05.0"}
+        call4 = {"op": "correct", "lat": "30d30.0", "long": "30d30.0", "altitude": "30d30.0", "assumedLat": "30d30.0", "assumedLong": "30d61.0"}
+
+        expected_result = {"op": "correct", "lat": "30d30.0", "long": "30d30.0", "altitude": "30d30.0", "assumedLat": "30d30.0", "assumedLong": "-05d30.0", 'error': 'invalid assumedLong'}
+        expected_result2 = {"op": "correct", "lat": "30d30.0", "long": "30d30.0", "altitude": "30d30.0", "assumedLat": "30d30.0", "assumedLong": "361d30.0", 'error': 'invalid assumedLong'}
+        expected_result3 = {"op": "correct", "lat": "30d30.0", "long": "30d30.0", "altitude": "30d30.0", "assumedLat": "30d30.0", "assumedLong": "30d-05.0", 'error': 'invalid assumedLong'}
+        expected_result4 = {"op": "correct", "lat": "30d30.0", "long": "30d30.0", "altitude": "30d30.0", "assumedLat": "30d30.0", "assumedLong": "30d61.0", 'error': 'invalid assumedLong'}
+
+        self.assertDictEqual(expected_result, dispatch.dispatch(call))
+        self.assertDictEqual(expected_result2, dispatch.dispatch(call2))
+        self.assertDictEqual(expected_result3, dispatch.dispatch(call3))
+        self.assertDictEqual(expected_result4, dispatch.dispatch(call4))
