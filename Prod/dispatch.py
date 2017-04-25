@@ -205,6 +205,17 @@ def dispatch(values=None):
             values['error'] = 'corrected distance/azimuth is not allowed as an input'
             return values
 
+        # Check for invalid assumedLat
+        assumedLat = values['assumedLat']
+        assumedLatDegrees = int(assumedLat[0: assumedLat.find('d')])
+        assumedLatMinutes = float(assumedLat[assumedLat.find('d')+1: assumedLat.length])
+
+        if not (assumedLatDegrees > -90 and assumedLatDegrees < 90) or not (assumedLatMinutes >= 0 and assumedLatMinutes < 60.0):
+            values['error'] = 'invalid assumedLat'
+
+
+
+
 
 
         return values    #This calculation is stubbed out

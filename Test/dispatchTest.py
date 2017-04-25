@@ -367,9 +367,18 @@ class DispatchTest(unittest.TestCase):
         self.assertDictEqual(expected_result, dispatch.dispatch(call))
         self.assertDictEqual(expected_result2, dispatch.dispatch(call2))
 
-    def test500_030_CorrectInvalidLat(self):
-        call = {"op": "correct", "lat": "-95d30.0", "long": "30d30.0", "altitude": "30d30.0", "assumedLat": "30d30.0", "assumedLong": "30d30"}
-        call2 = {"op": "correct", "lat": "95d30.0", "long": "30d30.0", "altitude": "30d30.0", "assumedLat": "30d30.0", "assumedLong": "30d30"}
-        call3 = {"op": "correct", "lat": "30d-03.5", "long": "30d30.0", "altitude": "30d30.0", "assumedLat": "30d30.0", "assumedLong": "30d30"}
-        call4 = {"op": "correct", "lat": "30d70.0", "long": "30d30.0", "altitude": "30d30.0", "assumedLat": "30d30.0", "assumedLong": "30d30"}
+    def test500_030_CorrectInvalidAssumedLat(self):
+        call = {"op": "correct", "lat": "30d30.0", "long": "30d30.0", "altitude": "30d30.0", "assumedLat": "-95d30.0", "assumedLong": "30d30"}
+        call2 = {"op": "correct", "lat": "30d30.0", "long": "30d30.0", "altitude": "30d30.0", "assumedLat": "95d30.0", "assumedLong": "30d30"}
+        call3 = {"op": "correct", "lat": "30d30.0", "long": "30d30.0", "altitude": "30d30.0", "assumedLat": "30d-05.0", "assumedLong": "30d30"}
+        call4 = {"op": "correct", "lat": "30d30.0", "long": "30d30.0", "altitude": "30d30.0", "assumedLat": "30d65.0", "assumedLong": "30d30"}
 
+        expected_result = {"op": "correct", "lat": "30d30.0", "long": "30d30.0", "altitude": "30d30.0", "assumedLat": "-95d30.0", "assumedLong": "30d30", "error": "invalid assumedLat"}
+        expected_result2 = {"op": "correct", "lat": "30d30.0", "long": "30d30.0", "altitude": "30d30.0", "assumedLat": "95d30.0", "assumedLong": "30d30", "error": "invalid assumedLat"}
+        expected_result3 = {"op": "correct", "lat": "30d30.0", "long": "30d30.0", "altitude": "30d30.0", "assumedLat": "30d-05.0", "assumedLong": "30d30", "error": "invalid assumedLat"}
+        expected_result4 = {"op": "correct", "lat": "30d30.0", "long": "30d30.0", "altitude": "30d30.0", "assumedLat": "30d65.0", "assumedLong": "30d30", "error": "invalid assumedLat"}
+
+        self.assertDictEqual(expected_result, dispatch.dispatch(call))
+        self.assertDictEqual(expected_result2, dispatch.dispatch(call2))
+        self.assertDictEqual(expected_result3, dispatch.dispatch(call3))
+        self.assertDictEqual(expected_result4, dispatch.dispatch(call4))
