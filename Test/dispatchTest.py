@@ -332,3 +332,27 @@ class DispatchTest(unittest.TestCase):
         expected_result2 = {'op': 'predict', 'body': 'hamal', 'long': '12d45.4', 'error': 'Longitude input not allowed'}
         self.assertDictEqual(expected_result, dispatch.dispatch(call))
         self.assertDictEqual(expected_result2, dispatch.dispatch(call2))
+
+
+#######################
+#   Test Correct Op
+#######################
+
+    def test500_010_CorrectMissingInputs(self):
+        call = {"op": "correct", "lat": "30d30.0", "long": "30d30.0", "altitude": "30d30.0", "assumedLat": "30d30.0"}
+        call2 = {"op": "correct", "lat": "30d30.0", "long": "30d30.0", "altitude": "30d30.0", "assumedLong": "30d30.0"}
+        call3 = {"op": "correct", "lat": "30d30.0", "long": "30d30.0", "assumedLat": "30d30.0", "assumedLong": "30d30.0"}
+        call4 = {"op": "correct", "lat": "30d30.0", "assumedLong": "30d30.0", "altitude": "30d30.0", "assumedLat": "30d30.0"}
+        call5 = {"op": "correct", "assumedLong": "30d30.0", "long": "30d30.0", "altitude": "30d30.0", "assumedLat": "30d30.0"}
+
+        expected_result = {"op": "correct", "lat": "30d30.0", "long": "30d30.0", "altitude": "30d30.0", "assumedLat": "30d30.0", "error": "Mandatory inputs missing"}
+        expected_result2 = {"op": "correct", "lat": "30d30.0", "long": "30d30.0", "altitude": "30d30.0", "assumedLong": "30d30.0", "error": "Mandatory inputs missing"}
+        expected_result3 = {"op": "correct", "lat": "30d30.0", "long": "30d30.0", "assumedLat": "30d30.0", "assumedLong": "30d30.0", "error": "Mandatory inputs missing"}
+        expected_result4 = {"op": "correct", "lat": "30d30.0", "assumedLong": "30d30.0", "altitude": "30d30.0", "assumedLat": "30d30.0", "error": "Mandatory inputs missing"}
+        expected_result5 = {"op": "correct", "assumedLong": "30d30.0", "long": "30d30.0", "altitude": "30d30.0", "assumedLat": "30d30.0", "error": "Mandatory inputs missing"}
+
+        self.assertDictEqual(expected_result, dispatch.dispatch(call))
+        self.assertDictEqual(expected_result2, dispatch.dispatch(call2))
+        self.assertDictEqual(expected_result3, dispatch.dispatch(call3))
+        self.assertDictEqual(expected_result4, dispatch.dispatch(call4))
+        self.assertDictEqual(expected_result5, dispatch.dispatch(call5))
