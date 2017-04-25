@@ -207,11 +207,19 @@ def dispatch(values=None):
 
         # Check for invalid assumedLat
         assumedLat = values['assumedLat']
+        if not ('d' in assumedLat):
+            values['error'] = 'invalid assumedLat'
+            return values
         assumedLatDegrees = int(assumedLat[0: assumedLat.find('d')])
-        assumedLatMinutes = float(assumedLat[assumedLat.find('d')+1: assumedLat.length])
+        assumedLatMinutes = float(assumedLat[assumedLat.find('d')+1: len(assumedLat)])
 
         if not (assumedLatDegrees > -90 and assumedLatDegrees < 90) or not (assumedLatMinutes >= 0 and assumedLatMinutes < 60.0):
             values['error'] = 'invalid assumedLat'
+            return values
+
+
+        # Check for invalid assumedLong
+
 
 
 

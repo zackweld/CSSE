@@ -382,3 +382,6 @@ class DispatchTest(unittest.TestCase):
         self.assertDictEqual(expected_result2, dispatch.dispatch(call2))
         self.assertDictEqual(expected_result3, dispatch.dispatch(call3))
         self.assertDictEqual(expected_result4, dispatch.dispatch(call4))
+
+    def test500_040_CorrectInvalidAssumedLong(self):
+        call = {"op": "correct", "lat": "30d30.0", "long": "30d30.0", "altitude": "30d30.0", "assumedLat": "30d30.0", "assumedLong": "30d30"}
