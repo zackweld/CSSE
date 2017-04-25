@@ -194,6 +194,16 @@ def dispatch(values=None):
 
         return values    #This calculation is stubbed out
     elif(values['op'] == 'correct'):
+
+        # Check for missing inputs
+        if not ('lat' in values and 'long' in values and 'assumedLat' in values and 'assumedLong' in values and 'altitude' in values):
+            values["error"] = "Mandatory inputs missing"
+            return values
+
+        
+
+
+
         return values    #This calculation is stubbed out
     elif(values['op'] == 'locate'):
         return values    #This calculation is stubbed out
