@@ -367,3 +367,9 @@ class DispatchTest(unittest.TestCase):
         self.assertDictEqual(expected_result, dispatch.dispatch(call))
         self.assertDictEqual(expected_result2, dispatch.dispatch(call2))
 
+    def test500_030_CorrectInvalidLat(self):
+        call = {"op": "correct", "lat": "-95d30.0", "long": "30d30.0", "altitude": "30d30.0", "assumedLat": "30d30.0", "assumedLong": "30d30"}
+        call2 = {"op": "correct", "lat": "95d30.0", "long": "30d30.0", "altitude": "30d30.0", "assumedLat": "30d30.0", "assumedLong": "30d30"}
+        call3 = {"op": "correct", "lat": "30d-03.5", "long": "30d30.0", "altitude": "30d30.0", "assumedLat": "30d30.0", "assumedLong": "30d30"}
+        call4 = {"op": "correct", "lat": "30d70.0", "long": "30d30.0", "altitude": "30d30.0", "assumedLat": "30d30.0", "assumedLong": "30d30"}
+
