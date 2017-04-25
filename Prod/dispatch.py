@@ -200,7 +200,10 @@ def dispatch(values=None):
             values["error"] = "Mandatory inputs missing"
             return values
 
-        
+        # Check if corrected distance/azimuth are listed as input
+        if ('correctedDistance' in values or 'correctedAzimuth' in values):
+            values['error'] = 'corrected distance/azimuth is not allowed as an input'
+            return values
 
 
 

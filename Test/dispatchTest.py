@@ -361,6 +361,9 @@ class DispatchTest(unittest.TestCase):
         call = {"op": "correct", "lat": "30d30.0", "long": "30d30.0", "altitude": "30d30.0", "assumedLat": "30d30.0", "assumedLong": "30d30", "correctedDistance": "300"}
         call2 = {"op": "correct", "lat": "30d30.0", "long": "30d30.0", "altitude": "30d30.0", "assumedLat": "30d30.0", "assumedLong": "30d30", "correctedAzimuth": "30d30.0"}
 
-        expected_result = {"op": "correct", "lat": "30d30.0", "long": "30d30.0", "altitude": "30d30.0", "assumedLat": "30d30.0", "assumedLong": "30d30", "correctedDistance": "300", "error": ""}
-        expected_result2 = {"op": "correct", "lat": "30d30.0", "long": "30d30.0", "altitude": "30d30.0", "assumedLat": "30d30.0", "assumedLong": "30d30", "correctedAzimuth": "30d30.0"}
+        expected_result = {"op": "correct", "lat": "30d30.0", "long": "30d30.0", "altitude": "30d30.0", "assumedLat": "30d30.0", "assumedLong": "30d30", "correctedDistance": "300", "error": "corrected distance/azimuth is not allowed as an input"}
+        expected_result2 = {"op": "correct", "lat": "30d30.0", "long": "30d30.0", "altitude": "30d30.0", "assumedLat": "30d30.0", "assumedLong": "30d30", "correctedAzimuth": "30d30.0", "error": "corrected distance/azimuth is not allowed as an input"}
+
+        self.assertDictEqual(expected_result, dispatch.dispatch(call))
+        self.assertDictEqual(expected_result2, dispatch.dispatch(call2))
 
