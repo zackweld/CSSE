@@ -231,6 +231,20 @@ def dispatch(values=None):
             values['error'] = 'invalid assumedLong'
             return values
 
+        lat = values["lat"]
+        long = values["long"]
+        altitude = values["altitude"]
+
+        latDouble = minutes_to_degrees(lat)
+        longDouble = minutes_to_degrees(long)
+        altitudeDouble = minutes_to_degrees(altitude)
+        assumedLongDouble = minutes_to_degrees(assumedLong)
+        assumedLatDouble = minutes_to_degrees(assumedLat)
+
+        # Calculate LHA
+        LHADouble = longDouble + assumedLongDouble
+        LHA = degrees_to_minutes(LHADouble)
+
 
 
 
