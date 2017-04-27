@@ -258,7 +258,7 @@ def dispatch(values=None):
         correctedDistanceArcMinutes = minutes_to_arc_minutes(degrees_to_minutes(correctedDistanceDouble))
 
         values['correctedDistance'] = correctedDistanceArcMinutes
-        # print correctedDistanceArcMinutes
+
 
         # Calculate corrected azimuth
 
@@ -270,7 +270,7 @@ def dispatch(values=None):
         correctedAzimuthDouble = math.degrees(correctedAzimuthRadians)
 
         correctedAzimuth = degrees_to_minutes(correctedAzimuthDouble)
-        # print correctedAzimuth
+
         values['correctedAzimuth'] = correctedAzimuth
 
         return values    #This calculation is stubbed out
