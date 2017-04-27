@@ -444,7 +444,7 @@ class DispatchTest(unittest.TestCase):
         assumedLatRadians = math.radians(assumedLatDouble)
 
         correctedAzimuthRadians = math.acos((math.sin(latRadians) - (math.sin(assumedLatRadians) * intermediateDistanceDouble)) / (math.cos(assumedLatRadians) * math.cos(math.asin(intermediateDistanceDouble))))
-        print correctedAzimuthRadians
+        
         correctedAzimuthDouble = math.degrees(correctedAzimuthRadians)
 
         correctedAzimuth = dispatch.degrees_to_minutes(correctedAzimuthDouble)
