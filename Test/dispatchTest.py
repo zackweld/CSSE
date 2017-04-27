@@ -418,3 +418,10 @@ class DispatchTest(unittest.TestCase):
         correctedAltitude = dispatch.degrees_to_minutes(math.degrees(correctedAltitudeDouble))
 
         self.assertEquals(expected_result, correctedAltitude)
+        call = {"op": "correct", "lat": "16d32.3", "long": "95d41.6", "altitude": "13d42.3", "assumedLat": "-53d38.4", "assumedLong": "74d35.3"}
+        expected_result = 3950
+        altitudeDouble = dispatch.minutes_to_degrees(call['altitude'])
+        correctedAltitudeDouble = dispatch.minutes_to_degrees('-52d07.8')
+        correctedDistanceDouble = altitudeDouble - correctedAltitudeDouble
+        correctedDistanceArcMinutes = dispatch.minutes_to_arc_minutes(dispatch.degrees_to_minutes(correctedDistanceDouble))
+        self.assertEquals(expected_result, correctedDistanceArcMinutes)

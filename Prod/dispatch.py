@@ -251,7 +251,9 @@ def dispatch(values=None):
 
         correctedAltitudeDouble = math.asin(intermediateDistanceDouble)
 
-        
+        # Calculate corrected distance
+
+
 
 
 
@@ -357,3 +359,10 @@ def check_time(t):
 
 
     return True
+
+def minutes_to_arc_minutes(deg):
+    degDegrees = deg[0: deg.find('d')]
+    degMinutes = deg[deg.find('d')+1: len(deg)]
+    degArcMinutes = int(degDegrees) * 60 + int(float(degMinutes))
+
+    return degArcMinutes
