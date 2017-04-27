@@ -249,7 +249,8 @@ def dispatch(values=None):
 
         intermediateDistanceDouble = (math.sin(math.radians(latDouble)) * math.sin(math.radians(assumedLatDouble))) + (math.cos(math.radians(latDouble)) * math.cos(math.radians(assumedLatDouble)) * math.cos(math.radians(LHADouble)))
 
-        correctedAltitudeDouble = math.asin(intermediateDistanceDouble)
+        correctedAltitudeDouble = math.degrees(math.asin(intermediateDistanceDouble))
+
 
         # Calculate corrected distance
 
@@ -260,7 +261,16 @@ def dispatch(values=None):
 
         # Calculate corrected azimuth
 
+        latRadians = math.radians(latDouble)
+        assumedLatRadians = math.radians(assumedLatDouble)
 
+        correctedAzimuthRadians = math.acos((math.sin(latRadians) - (math.sin(assumedLatRadians) * intermediateDistanceDouble)) / (math.cos(assumedLatRadians) * math.cos(math.asin(intermediateDistanceDouble))))
+
+        correctedAzimuthDouble = math.degrees(correctedAzimuthRadians)
+
+        correctedAzimuth = degrees_to_minutes(correctedAzimuthDouble)
+
+        values['correctedAzimuth'] = correctedAzimuth
 
         return values    #This calculation is stubbed out
     elif(values['op'] == 'locate'):
