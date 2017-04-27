@@ -444,8 +444,13 @@ class DispatchTest(unittest.TestCase):
         assumedLatRadians = math.radians(assumedLatDouble)
 
         correctedAzimuthRadians = math.acos((math.sin(latRadians) - (math.sin(assumedLatRadians) * intermediateDistanceDouble)) / (math.cos(assumedLatRadians) * math.cos(math.asin(intermediateDistanceDouble))))
-        
+
         correctedAzimuthDouble = math.degrees(correctedAzimuthRadians)
 
         correctedAzimuth = dispatch.degrees_to_minutes(correctedAzimuthDouble)
         self.assertEquals(expected_result, correctedAzimuth)
+
+    def test500_090_CorrectFullCalculationTest(self):
+        call = {"op": "correct", "lat": "16d32.3", "long": "95d41.6", "altitude": "13d42.3", "assumedLat": "-53d38.4", "assumedLong": "74d35.3"}
+        expected_result = {}
+        self.assertDictEqual(expected_result, dispatch.dispatch(call))
