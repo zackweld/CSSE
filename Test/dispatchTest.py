@@ -398,3 +398,8 @@ class DispatchTest(unittest.TestCase):
         self.assertDictEqual(expected_result2, dispatch.dispatch(call2))
         self.assertDictEqual(expected_result3, dispatch.dispatch(call3))
         self.assertDictEqual(expected_result4, dispatch.dispatch(call4))
+
+    def test500_050_CorrectCalculateLHA(self):
+        call = {"op": "correct", "lat": "16d32.3", "long": "95d41.6", "altitude": "13d42.3", "assumedLat": "-53d38.4", "assumedLong": "74d35.3"}
+        LHA = 0
+        expected_result = "170d"
