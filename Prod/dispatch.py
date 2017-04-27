@@ -254,11 +254,12 @@ def dispatch(values=None):
         # Calculate corrected distance
 
         correctedDistanceDouble = altitudeDouble - correctedAltitudeDouble
-        correctedDistanceArcMinutes = dispatch.minutes_to_arc_minutes(dispatch.degrees_to_minutes(correctedDistanceDouble))
+        correctedDistanceArcMinutes = minutes_to_arc_minutes(degrees_to_minutes(correctedDistanceDouble))
 
         values['correctedDistance'] = correctedDistanceArcMinutes
 
         # Calculate corrected azimuth
+
 
 
         return values    #This calculation is stubbed out
