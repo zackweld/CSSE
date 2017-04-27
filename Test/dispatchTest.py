@@ -430,4 +430,22 @@ class DispatchTest(unittest.TestCase):
 
     def test500_080_CorrectCalculateCorrectedAzimuth(self):
         call = {"op": "correct", "lat": "16d32.3", "long": "95d41.6", "altitude": "13d42.3", "assumedLat": "-53d38.4", "assumedLong": "74d35.3"}
-        expected_result = 
+        expected_result = "164d43.1"
+        latDouble = dispatch.minutes_to_degrees(call['lat'])
+        longDouble = dispatch.minutes_to_degrees(call['long'])
+        assumedLatDouble = dispatch.minutes_to_degrees(call['assumedLat'])
+        assumedLongDouble = dispatch.minutes_to_degrees(call['assumedLong'])
+        altitudeDouble = dispatch.minutes_to_degrees(call['altitude'])
+
+        LHADouble = dispatch.minutes_to_degrees(call["long"]) + dispatch.minutes_to_degrees(call["assumedLong"])
+        intermediateDistanceDouble = (math.sin(math.radians(latDouble)) * math.sin(math.radians(assumedLatDouble))) + (math.cos(math.radians(latDouble)) * math.cos(math.radians(assumedLatDouble)) * math.cos(math.radians(LHADouble)))
+
+        latRadians = math.radians(latDouble)
+        assumedLatRadians = math.radians(assumedLatDouble)
+
+        correctedAzimuthRadians = math.acos((math.sin(latRadians) - (math.sin(assumedLatRadians) * intermediateDistanceDouble)) / (math.cos(assumedLatRadians) * math.cos(math.asin(intermediateDistanceDouble))))
+        print correctedAzimuthRadians
+        correctedAzimuthDouble = math.degrees(correctedAzimuthRadians)
+
+        correctedAzimuth = dispatch.degrees_to_minutes(correctedAzimuthDouble)
+        self.assertEquals(expected_result, correctedAzimuth)
