@@ -304,7 +304,7 @@ class DispatchTest(unittest.TestCase):
 
         rotation = dispatch.minutes_to_degrees('100d42.6') + angularDifference + totalProgression
         rotation = dispatch.degrees_to_minutes(rotation)
-        self.assertEquals(rotation, '100d4.8')
+        self.assertEquals(rotation, '100d04.8')
 
     def test400_110_PredictAngleEarthsRotation(self):
         total_seconds = int(timedelta(days=16, hours=03, minutes=15, seconds=42).total_seconds())
@@ -415,7 +415,6 @@ class DispatchTest(unittest.TestCase):
         intermediateDistanceDouble = (math.sin(math.radians(latDouble)) * math.sin(math.radians(assumedLatDouble))) + (math.cos(math.radians(latDouble)) * math.cos(math.radians(assumedLatDouble)) * math.cos(math.radians(LHADouble)))
 
         correctedAltitudeDouble = math.asin(intermediateDistanceDouble)
-        print correctedAltitudeDouble
         correctedAltitude = dispatch.degrees_to_minutes(math.degrees(correctedAltitudeDouble))
 
         self.assertEquals(expected_result, correctedAltitude)

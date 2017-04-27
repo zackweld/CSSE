@@ -245,7 +245,13 @@ def dispatch(values=None):
         LHADouble = longDouble + assumedLongDouble
         LHA = degrees_to_minutes(LHADouble)
 
+        # Calculate corrected altitude
 
+        intermediateDistanceDouble = (math.sin(math.radians(latDouble)) * math.sin(math.radians(assumedLatDouble))) + (math.cos(math.radians(latDouble)) * math.cos(math.radians(assumedLatDouble)) * math.cos(math.radians(LHADouble)))
+
+        correctedAltitudeDouble = math.asin(intermediateDistanceDouble)
+
+        
 
 
 
