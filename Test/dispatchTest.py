@@ -402,5 +402,6 @@ class DispatchTest(unittest.TestCase):
     def test500_050_CorrectCalculateLHA(self):
         call = {"op": "correct", "lat": "16d32.3", "long": "95d41.6", "altitude": "13d42.3", "assumedLat": "-53d38.4", "assumedLong": "74d35.3"}
         expected_result = "170d17.0"
-        LHADouble = dispatch.minutes_to_degrees(call["lat"]) + dispatch.minutes_to_degrees(call["assumedLong"])
+        LHADouble = dispatch.minutes_to_degrees(call["long"]) + dispatch.minutes_to_degrees(call["assumedLong"])
+        LHA = dispatch.degrees_to_minutes(LHADouble)
         self.assertEquals(LHA, expected_result)
