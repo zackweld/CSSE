@@ -430,7 +430,7 @@ class DispatchTest(unittest.TestCase):
 
     def test500_080_CorrectCalculateCorrectedAzimuth(self):
         call = {"op": "correct", "lat": "16d32.3", "long": "95d41.6", "altitude": "13d42.3", "assumedLat": "-53d38.4", "assumedLong": "74d35.3"}
-        expected_result = "164d43.1"
+        expected_result = "164d42.9"
         latDouble = dispatch.minutes_to_degrees(call['lat'])
         longDouble = dispatch.minutes_to_degrees(call['long'])
         assumedLatDouble = dispatch.minutes_to_degrees(call['assumedLat'])
