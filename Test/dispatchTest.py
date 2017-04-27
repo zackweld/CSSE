@@ -412,6 +412,10 @@ class DispatchTest(unittest.TestCase):
         LHADouble = dispatch.minutes_to_degrees(call["long"]) + dispatch.minutes_to_degrees(call["assumedLong"])
         latDouble = dispatch.minutes_to_degrees(call["lat"])
         assumedLatDouble = dispatch.minutes_to_degrees(call["assumedLat"])
-        intermediateDistanceDouble = (())
+        intermediateDistanceDouble = (math.sin(math.radians(latDouble)) * math.sin(math.radians(assumedLatDouble))) + (math.cos(math.radians(latDouble)) * math.cos(math.radians(assumedLatDouble)) * math.cos(math.radians(LHADouble)))
+
+        correctedAltitudeDouble = math.asin(intermediateDistanceDouble)
+        print correctedAltitudeDouble
+        correctedAltitude = dispatch.degrees_to_minutes(math.degrees(correctedAltitudeDouble))
 
         self.assertEquals(expected_result, correctedAltitude)

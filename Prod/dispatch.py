@@ -267,9 +267,14 @@ def minutes_to_degrees(minutes):
     deg = float(minutes[0:minutes.find('d')])
     m = float(minutes[minutes.find('d')+1: len(minutes)])
     m = m / 60
-    deg = deg + m
     if minutes[0] == '-':
-        deg = deg * (-1)
+        deg = deg - m
+    else:
+        deg = deg + m
+
+    # deg = deg + m
+    # if minutes[0] == '-':
+    #     deg = deg * (-1)
     return deg
 
 def degrees_to_minutes(degrees):
@@ -283,7 +288,11 @@ def degrees_to_minutes(degrees):
     deg_minutes = str(degrees)[0:str(degrees).find('.')+2]
     while deg > 360:
         deg = deg - 360
-    altitude = str(deg) + 'd' + deg_minutes
+
+    if float(deg_minutes) < 10.0:
+        altitude = str(deg) + 'd0' + deg_minutes
+    else:
+        altitude = str(deg) + 'd' + deg_minutes
     return altitude
 
 def read_stars_file(star):
